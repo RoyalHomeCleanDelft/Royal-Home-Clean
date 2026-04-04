@@ -14,12 +14,11 @@ Delft, Rijswijk, Den Hoorn, The Hague
 
 ## Contact
 Phone / WhatsApp: +31 6 16978993  
-Email: royalhomecleandelft@outlook.com
+Email: royalhomeclean@outlook.com
 
 ## Website
 Built as a one-page, mobile-first website using HTML and Tailwind CSS.
 
 ## Notes
-- Hosted on Netlify
+- Hosted on Vercel
 - Includes bilingual support (English / Dutch)
-- Contact form handled via Netlify Forms
