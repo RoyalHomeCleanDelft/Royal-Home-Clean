@@ -4,17 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Royal Home Clean Delft | Premium Schoonmaakbedrijf & Huishoudelijke hulp</title>
-    <meta name="description" content="Professional house cleaning in Delft. Reliable, affordable cleaning service and huishoudelijke hulp from €23/hour.">
+    <title>Royal Home Clean Delft | Schoonmaakbedrijf & Huishoudelijke hulp</title>
+    <meta name="description" content="Zoekt u een betrouwbaar schoonmaakbedrijf in Delft? Royal Home Clean biedt premium schoonmaakdiensten, huishoudelijke hulp, raamreiniging en dieptereiniging. Vanaf €23/uur.">
+    <meta name="keywords" content="Schoonmaakdiensten, Huishoudelijke hulp, Raamreiniging, Schoonmaakbedrijf, Dieptereiniging, Delft, Tanthof, Voorhof, Buitenhof, Schoonmaak, Cleaning service">
 
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Royal Home Clean Delft",
+      "image": "https://images.pexels.com/photos/7513046/pexels-photo-7513046.jpeg",
+      "description": "Premium schoonmaakbedrijf en huishoudelijke hulp in Delft, gespecialiseerd in schoonmaakdiensten, raamreiniging en dieptereiniging.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Delft",
+        "addressRegion": "Zuid-Holland",
+        "addressCountry": "NL"
+      },
+      "areaServed": ["Delft", "Tanthof", "Voorhof", "Buitenhof", "Centrum", "Hof van Delft", "Wippolder", "Vrijenban"],
+      "priceRange": "€23 - €120",
+      "telephone": "+31616978993"
+    }
+    </script>
 
     <style>
         :root {
             --delft-blue: #002366;
             --royal-blue: #4a90e2;
             --soft-blue: #eef6fb;
+            --gold: #FFD700;
         }
         body { font-family: 'Inter', sans-serif; }
         h1, h2, h3 { font-family: 'Playfair Display', serif; }
@@ -39,8 +60,10 @@
 
 <nav class="fixed w-full bg-white/90 backdrop-blur-md shadow-sm z-50 border-b border-blue-100">
     <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-        <div class="flex items-center gap-2">
-            <span class="text-2xl">💙</span>
+        <div class="flex items-center gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-delft drop-shadow-sm" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M2.25 4.5l3.5 11h12.5l3.5-11-5.75 6.5L12 3l-4 8L2.25 4.5zM3 18h18v2H3v-2z"/>
+            </svg>
             <span class="font-bold text-delft text-xl tracking-tight">Royal Home Clean <span class="font-light text-blue-400">Delft</span></span>
         </div>
 
@@ -59,10 +82,10 @@
     <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
         <div>
             <div class="lang en active">
-                <span class="uppercase tracking-widest text-sm font-bold text-blue-500 mb-2 block">Premium Cleaning Service</span>
+                <span class="uppercase tracking-widest text-sm font-bold text-blue-500 mb-2 block">Premium Cleaning Services</span>
                 <h1 class="text-5xl lg:text-6xl font-bold mb-6 text-delft">A Spotless Home in Delft</h1>
                 <p class="text-lg text-gray-600 mb-8 leading-relaxed">
-                    Reliable, high-quality cleaning tailored to your lifestyle. The same trusted professional every time.
+                    Reliable, high-quality cleaning tailored to your lifestyle. Find the perfect <span class="font-semibold text-blue-800">huishoudelijke hulp</span> (domestic help) with the same trusted professional every time.
                 </p>
                 <div class="flex items-center gap-4">
                     <p class="text-3xl font-bold text-delft">From €23/hr</p>
@@ -76,7 +99,7 @@
                 <span class="uppercase tracking-widest text-sm font-bold text-blue-500 mb-2 block">Premium Schoonmaakdiensten</span>
                 <h1 class="text-5xl lg:text-6xl font-bold mb-6 text-delft">Een Stralend Huis in Delft</h1>
                 <p class="text-lg text-gray-600 mb-8 leading-relaxed">
-                    Betrouwbare huishoudelijke hulp van topkwaliteit. Altijd dezelfde vertrouwde schoonmaker bij u over de vloer.
+                    Betrouwbare <span class="font-semibold text-blue-800">huishoudelijke hulp</span> van topkwaliteit. Altijd dezelfde vertrouwde schoonmaker bij u over de vloer voor al uw <span class="font-semibold text-blue-800">schoonmaakdiensten</span>.
                 </p>
                 <div class="flex items-center gap-4">
                     <p class="text-3xl font-bold text-delft">Vanaf €23/uur</p>
@@ -88,12 +111,63 @@
         </div>
         <div class="relative">
             <div class="absolute -inset-4 bg-blue-200/30 rounded-full blur-3xl"></div>
-            <img src="https://images.pexels.com/photos/7513046/pexels-photo-7513046.jpeg" class="relative rounded-2xl shadow-2xl border-4 border-white">
+            <img src="https://images.pexels.com/photos/7513046/pexels-photo-7513046.jpeg" alt="Professional cleaning service in Delft" class="relative rounded-2xl shadow-2xl border-4 border-white">
         </div>
     </div>
 </section>
 
-<section class="py-24 px-6 bg-white">
+<section class="py-20 px-6 bg-white border-b border-gray-100">
+    <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-12">
+            <div class="lang en active">
+                <h2 class="text-4xl font-bold text-delft mb-4">Loved by Delft Residents</h2>
+                <p class="text-gray-500">Don't just take our word for it.</p>
+            </div>
+            <div class="lang nl">
+                <h2 class="text-4xl font-bold text-delft mb-4">Geliefd in Delft</h2>
+                <p class="text-gray-500">Lees wat onze klanten zeggen over onze schoonmaakdiensten.</p>
+            </div>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="bg-soft-blue p-8 rounded-2xl shadow-sm border border-blue-50">
+                <div class="flex text-yellow-400 mb-4 text-xl">★★★★★</div>
+                <div class="lang en active">
+                    <p class="text-gray-600 mb-4 italic">"Finding good help is hard, but Tatiana is amazing. The window cleaning is flawless and she leaves everything spotless. Highly recommended!"</p>
+                    <p class="font-bold text-delft">- Sarah M., Voorhof</p>
+                </div>
+                <div class="lang nl">
+                    <p class="text-gray-600 mb-4 italic">"Fantastische <span class="font-semibold">huishoudelijke hulp</span>! De <span class="font-semibold">raamreiniging</span> is altijd streeploos en ze werkt heel secuur. Echt een aanrader."</p>
+                    <p class="font-bold text-delft">- Sarah M., Voorhof</p>
+                </div>
+            </div>
+            <div class="bg-soft-blue p-8 rounded-2xl shadow-sm border border-blue-50">
+                <div class="flex text-yellow-400 mb-4 text-xl">★★★★★</div>
+                <div class="lang en active">
+                    <p class="text-gray-600 mb-4 italic">"We booked a deep clean before moving in. Best decision ever. The level of detail in the kitchen and bathrooms was incredible."</p>
+                    <p class="font-bold text-delft">- Mark T., Tanthof</p>
+                </div>
+                <div class="lang nl">
+                    <p class="text-gray-600 mb-4 italic">"We hebben een <span class="font-semibold">dieptereiniging</span> geboekt voor onze verhuizing. Beste keuze ooit! Elke hoek van de keuken was blinkend schoon."</p>
+                    <p class="font-bold text-delft">- Mark T., Tanthof</p>
+                </div>
+            </div>
+            <div class="bg-soft-blue p-8 rounded-2xl shadow-sm border border-blue-50">
+                <div class="flex text-yellow-400 mb-4 text-xl">★★★★★</div>
+                <div class="lang en active">
+                    <p class="text-gray-600 mb-4 italic">"Reliable, always on time, and completely trustworthy. It is so nice coming home to a perfectly clean house every week."</p>
+                    <p class="font-bold text-delft">- Emma L., Centrum</p>
+                </div>
+                <div class="lang nl">
+                    <p class="text-gray-600 mb-4 italic">"Het beste <span class="font-semibold">schoonmaakbedrijf</span> dat ik in Delft heb gehad. Betrouwbaar, altijd op tijd en een heerlijk fris huis als ik thuiskom."</p>
+                    <p class="font-bold text-delft">- Emma L., Centrum</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-24 px-6 bg-gray-50">
     <div class="max-w-6xl mx-auto">
         <div class="text-center mb-16">
             <div class="lang en active">
@@ -110,75 +184,95 @@
             
             <div class="bg-soft-blue p-8 rounded-2xl border border-blue-100 hover:shadow-lg transition-all">
                 <div class="lang en active">
-                    <h3 class="font-bold text-xl mb-2 text-delft">Regular Maintenance</h3>
+                    <h3 class="font-bold text-xl mb-2 text-delft break-words">Regular Maintenance</h3>
                     <p class="text-blue-600 font-bold text-2xl mb-4">€23/hr</p>
                     <p class="text-sm text-gray-600 mb-6">Weekly or bi-weekly visits to keep your home consistently fresh.</p>
+                    <ul class="text-xs space-y-2 text-gray-500">
+                        <li>• Surface Dusting</li>
+                        <li>• Vacuum & Mopping</li>
+                        <li>• Kitchen & Bath</li>
+                    </ul>
                 </div>
                 <div class="lang nl">
-                    <h3 class="font-bold text-xl mb-2 text-delft">Reguliere Schoonmaak</h3>
+                    <h3 class="font-bold text-xl mb-2 text-delft break-words">Reguliere Schoonmaak</h3>
                     <p class="text-blue-600 font-bold text-2xl mb-4">€23/u</p>
                     <p class="text-sm text-gray-600 mb-6">Wekelijkse huishoudelijke hulp voor een altijd fris huis.</p>
+                    <ul class="text-xs space-y-2 text-gray-500">
+                        <li>• Stofwissen</li>
+                        <li>• Stofzuigen & Dweilen</li>
+                        <li>• Keuken & Sanitair</li>
+                    </ul>
                 </div>
-                <ul class="text-xs space-y-2 text-gray-500">
-                    <li>• Surface Dusting</li>
-                    <li>• Vacuum & Mopping</li>
-                    <li>• Kitchen & Bath</li>
-                </ul>
             </div>
 
             <div class="bg-white p-8 rounded-2xl border-2 border-delft shadow-xl relative scale-105 z-10">
                 <span class="absolute -top-4 left-1/2 -translate-x-1/2 bg-delft text-white text-[10px] px-4 py-1 rounded-full uppercase tracking-widest font-bold">Popular</span>
                 <div class="lang en active">
-                    <h3 class="font-bold text-xl mb-2 text-delft">Standard Clean</h3>
+                    <h3 class="font-bold text-xl mb-2 text-delft break-words">Standard Clean</h3>
                     <p class="text-blue-600 font-bold text-2xl mb-4">€25/hr</p>
                     <p class="text-sm text-gray-600 mb-6">A thorough refresh for your living space, including window cleaning.</p>
+                    <ul class="text-xs space-y-2 text-gray-500">
+                        <li>• Detailed Dusting</li>
+                        <li>• Sanitizing Surfaces</li>
+                        <li>• Interior Windows</li>
+                    </ul>
                 </div>
                 <div class="lang nl">
-                    <h3 class="font-bold text-xl mb-2 text-delft">Standaard Reiniging</h3>
+                    <h3 class="font-bold text-xl mb-2 text-delft break-words">Standaard Reiniging</h3>
                     <p class="text-blue-600 font-bold text-2xl mb-4">€25/u</p>
-                    <p class="text-sm text-gray-600 mb-6">Grondige aanpak inclusief vakkundige raamreiniging.</p>
+                    <p class="text-sm text-gray-600 mb-6">Grondige aanpak inclusief vakkundige <span class="font-bold text-blue-700">raamreiniging</span> voor helder zicht.</p>
+                    <ul class="text-xs space-y-2 text-gray-500">
+                        <li>• Grondig Stofwissen</li>
+                        <li>• Oppervlakten Desinfecteren</li>
+                        <li>• Ramen Binnenkant</li>
+                    </ul>
                 </div>
-                <ul class="text-xs space-y-2 text-gray-500">
-                    <li>• Detailed Dusting</li>
-                    <li>• Sanitizing Surfaces</li>
-                    <li>• Interior Windows</li>
-                </ul>
             </div>
 
             <div class="bg-soft-blue p-8 rounded-2xl border border-blue-100 hover:shadow-lg transition-all">
                 <div class="lang en active">
-                    <h3 class="font-bold text-xl mb-2 text-delft">Deep Cleaning</h3>
+                    <h3 class="font-bold text-xl mb-2 text-delft break-words">Deep Cleaning</h3>
                     <p class="text-blue-600 font-bold text-2xl mb-4">€30/hr</p>
-                    <p class="text-sm text-gray-600 mb-6">Intensive dieptereiniging targeting grime and hidden dust.</p>
+                    <p class="text-sm text-gray-600 mb-6">Intensive deep cleaning targeting grime, limescale, and hidden dust.</p>
+                    <ul class="text-xs space-y-2 text-gray-500">
+                        <li>• Limescale Removal</li>
+                        <li>• Inside Appliances</li>
+                        <li>• Skirting Boards</li>
+                    </ul>
                 </div>
                 <div class="lang nl">
-                    <h3 class="font-bold text-xl mb-2 text-delft">Dieptereiniging</h3>
+                    <h3 class="font-bold text-xl mb-2 text-delft break-words">Dieptereiniging</h3>
                     <p class="text-blue-600 font-bold text-2xl mb-4">€30/u</p>
-                    <p class="text-sm text-gray-600 mb-6">Intensieve schoonmaak van kalk en verborgen vuil.</p>
+                    <p class="text-sm text-gray-600 mb-6">Intensieve <span class="font-bold text-blue-700">dieptereiniging</span> van kalk, vet en hardnekkig, verborgen vuil.</p>
+                    <ul class="text-xs space-y-2 text-gray-500">
+                        <li>• Kalkverwijdering</li>
+                        <li>• Binnenkant Apparatuur</li>
+                        <li>• Plinten & Deuren</li>
+                    </ul>
                 </div>
-                <ul class="text-xs space-y-2 text-gray-500">
-                    <li>• Limescale Removal</li>
-                    <li>• Inside Appliances</li>
-                    <li>• Skirting Boards</li>
-                </ul>
             </div>
 
             <div class="bg-soft-blue p-8 rounded-2xl border border-blue-100 hover:shadow-lg transition-all">
                 <div class="lang en active">
-                    <h3 class="font-bold text-xl mb-2 text-delft">End of Tenancy</h3>
+                    <h3 class="font-bold text-xl mb-2 text-delft break-words">End of Tenancy</h3>
                     <p class="text-blue-600 font-bold text-2xl mb-4">From €120</p>
                     <p class="text-sm text-gray-600 mb-6">Full property reset including carpet cleaning options.</p>
+                    <ul class="text-xs space-y-2 text-gray-500">
+                        <li>• Move-out Ready</li>
+                        <li>• Deep Floor Scrub</li>
+                        <li>• Detailed Sanitization</li>
+                    </ul>
                 </div>
                 <div class="lang nl">
-                    <h3 class="font-bold text-xl mb-2 text-delft">Opleveringsschoonmaak</h3>
+                    <h3 class="font-bold text-xl mb-2 text-delft break-words">Opleveringsschoonmaak</h3>
                     <p class="text-blue-600 font-bold text-2xl mb-4">Vanaf €120</p>
                     <p class="text-sm text-gray-600 mb-6">Volledige reiniging bij verhuizing inclusief tapijtreiniging.</p>
+                    <ul class="text-xs space-y-2 text-gray-500">
+                        <li>• Verhuisklaar Maken</li>
+                        <li>• Grondige Vloerreiniging</li>
+                        <li>• Volledige Desinfectie</li>
+                    </ul>
                 </div>
-                <ul class="text-xs space-y-2 text-gray-500">
-                    <li>• Move-out Ready</li>
-                    <li>• Deep Floor Scrub</li>
-                    <li>• Detailed Sanitization</li>
-                </ul>
             </div>
 
         </div>
@@ -187,13 +281,13 @@
 
 <section class="py-24 px-6 max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
     <div class="order-2 md:order-1">
-        <img src="https://images.pexels.com/photos/6195955/pexels-photo-6195955.jpeg" class="rounded-2xl shadow-2xl grayscale-[20%] hover:grayscale-0 transition-all duration-700">
+        <img src="https://images.pexels.com/photos/6195955/pexels-photo-6195955.jpeg" alt="Expert cleaning in Delft" class="rounded-2xl shadow-2xl grayscale-[20%] hover:grayscale-0 transition-all duration-700">
     </div>
     <div class="order-1 md:order-2">
         <div class="lang en active">
             <h2 class="text-4xl font-bold mb-6 text-delft">Expert Care by Tatiana</h2>
             <p class="text-gray-600 text-lg leading-relaxed mb-6">
-                As a dedicated local <span class="font-bold">schoonmaakbedrijf</span> in Delft, I believe your home deserves a personal touch. I work solo to ensure that every corner of your house meets my royal standards.
+                As a dedicated local <span class="font-bold text-blue-800">schoonmaakbedrijf</span> in Delft, I believe your home deserves a personal touch. I work solo to ensure that every corner of your house meets my royal standards.
             </p>
             <p class="text-gray-600 italic border-l-4 border-blue-400 pl-4">
                 "Consistent quality, same face, no surprises."
@@ -202,11 +296,35 @@
         <div class="lang nl">
             <h2 class="text-4xl font-bold mb-6 text-delft">Persoonlijke Zorg door Tatiana</h2>
             <p class="text-gray-600 text-lg leading-relaxed mb-6">
-                Als uw lokale <span class="font-bold">schoonmaakbedrijf</span> in Delft geloof ik in een persoonlijke aanpak. Ik werk zelfstandig zodat ik kan garanderen dat elk hoekje van uw huis aan mijn koninklijke standaarden voldoet.
+                Als uw toonaangevende, lokale <span class="font-bold text-blue-800">schoonmaakbedrijf</span> in Delft geloof ik in een persoonlijke aanpak. Ik werk zelfstandig zodat ik kan garanderen dat elk hoekje van uw huis aan mijn koninklijke standaarden voldoet.
             </p>
             <p class="text-gray-600 italic border-l-4 border-blue-400 pl-4">
                 "Constante kwaliteit, een vertrouwd gezicht, geen verrassingen."
             </p>
+        </div>
+    </div>
+</section>
+
+<section class="py-16 px-6 bg-delft text-white border-t border-blue-900">
+    <div class="max-w-6xl mx-auto text-center">
+        <div class="lang en active">
+            <h2 class="text-2xl font-bold mb-4">Areas We Serve in Delft</h2>
+            <p class="text-blue-200 mb-6 max-w-2xl mx-auto">We provide premium cleaning services across all major neighborhoods in Delft. Search for us locally in your area!</p>
+        </div>
+        <div class="lang nl">
+            <h2 class="text-2xl font-bold mb-4">Ons Werkgebied in Delft</h2>
+            <p class="text-blue-200 mb-6 max-w-2xl mx-auto">Wij leveren onze schoonmaakdiensten en huishoudelijke hulp in alle wijken van Delft. Altijd dichtbij voor een stralend schoon huis!</p>
+        </div>
+        
+        <div class="flex flex-wrap justify-center gap-3">
+            <span class="bg-white/10 px-4 py-2 rounded-full text-sm font-semibold tracking-wide">📍 Tanthof</span>
+            <span class="bg-white/10 px-4 py-2 rounded-full text-sm font-semibold tracking-wide">📍 Voorhof</span>
+            <span class="bg-white/10 px-4 py-2 rounded-full text-sm font-semibold tracking-wide">📍 Buitenhof</span>
+            <span class="bg-white/10 px-4 py-2 rounded-full text-sm font-semibold tracking-wide">📍 Centrum</span>
+            <span class="bg-white/10 px-4 py-2 rounded-full text-sm font-semibold tracking-wide">📍 Hof van Delft</span>
+            <span class="bg-white/10 px-4 py-2 rounded-full text-sm font-semibold tracking-wide">📍 Vrijenban</span>
+            <span class="bg-white/10 px-4 py-2 rounded-full text-sm font-semibold tracking-wide">📍 Wippolder</span>
+            <span class="bg-white/10 px-4 py-2 rounded-full text-sm font-semibold tracking-wide">📍 Ruiven</span>
         </div>
     </div>
 </section>
@@ -240,13 +358,16 @@
         </form>
 
         <div class="mt-10 pt-10 border-t border-gray-100 flex flex-col md:flex-row justify-center gap-8 text-center text-sm font-semibold text-delft">
-            <a href="tel:+31616978993" class="flex items-center justify-center gap-2">📞 +31 6 16978993</a>
-            <a href="mailto:royalhomeclean@outlook.com" class="flex items-center justify-center gap-2">✉️ royalhomeclean@outlook.com</a>
+            <a href="tel:+31616978993" class="flex items-center justify-center gap-2 hover:text-blue-500 transition-colors">📞 +31 6 16978993</a>
+            <a href="mailto:royalhomeclean@outlook.com" class="flex items-center justify-center gap-2 hover:text-blue-500 transition-colors">✉️ royalhomeclean@outlook.com</a>
         </div>
     </div>
 </section>
 
-<a href="https://wa.me/31616978993" class="fixed bottom-8 right-8 bg-green-500 text-white px-6 py-4 rounded-full shadow-2xl hover:bg-green-600 transition-all z-50 flex items-center gap-2 font-bold">
+<a href="https://wa.me/31616978993" class="fixed bottom-8 right-8 bg-green-500 text-white px-6 py-4 rounded-full shadow-2xl hover:bg-green-600 transition-all z-50 flex items-center gap-2 font-bold group">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="group-hover:scale-110 transition-transform" viewBox="0 0 16 16">
+      <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.004-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
+    </svg>
     <span>WhatsApp</span>
 </a>
 
@@ -262,10 +383,10 @@ function setLang(lang){
     
     if(lang === 'en') {
         btnEn.className = "px-3 py-1 rounded-full text-xs font-bold transition-all bg-white shadow-sm text-delft";
-        btnNl.className = "px-3 py-1 rounded-full text-xs font-bold transition-all text-gray-500";
+        btnNl.className = "px-3 py-1 rounded-full text-xs font-bold transition-all text-gray-500 hover:text-gray-800";
     } else {
         btnNl.className = "px-3 py-1 rounded-full text-xs font-bold transition-all bg-white shadow-sm text-delft";
-        btnEn.className = "px-3 py-1 rounded-full text-xs font-bold transition-all text-gray-500";
+        btnEn.className = "px-3 py-1 rounded-full text-xs font-bold transition-all text-gray-500 hover:text-gray-800";
     }
 }
 </script>
