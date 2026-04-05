@@ -48,7 +48,6 @@ body { font-family: 'Inter', sans-serif; }
 <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center">
 
 <div>
-
 <div class="lang en active">
 <h1 class="text-5xl font-bold mb-6 text-primary">Premium House Cleaning in Delft</h1>
 <p class="text-lg text-gray-600 mb-6">
@@ -70,117 +69,9 @@ Betrouwbare schoonmaakservice in Delft. Altijd dezelfde schoonmaker.
 Vraag een offerte
 </a>
 </div>
-
 </div>
 
 <img src="https://images.pexels.com/photos/7513046/pexels-photo-7513046.jpeg" class="rounded-2xl shadow-lg">
-
-</div>
-</section>
-
-<!-- ABOUT -->
-<section class="py-20 px-6 max-w-5xl mx-auto grid md:grid-cols-2 gap-10 items-center">
-
-<img src="https://images.pexels.com/photos/6195955/pexels-photo-6195955.jpeg" class="rounded-2xl shadow">
-
-<div>
-
-<div class="lang en active">
-<h2 class="text-3xl font-bold mb-4">A Personal Cleaning Service You Can Trust</h2>
-<p class="text-gray-600">
-Hi, I’m Tatiana — the person behind Royal Home Clean Delft.
-I provide a reliable, high-quality house cleaning service in Delft and surrounding areas.
-Because I work alone, you always get the same cleaner, consistent results, and a service you can trust.
-</p>
-</div>
-
-<div class="lang nl">
-<h2 class="text-3xl font-bold mb-4">Een Persoonlijke Schoonmaakservice</h2>
-<p class="text-gray-600">
-Hallo, ik ben Tatiana — de persoon achter Royal Home Clean Delft.
-Ik bied een betrouwbare schoonmaakservice in Delft en omgeving.
-Omdat ik alleen werk, krijg je altijd dezelfde schoonmaker en constante kwaliteit.
-</p>
-</div>
-
-</div>
-
-</section>
-
-<!-- SERVICES -->
-<section class="py-20 px-6 max-w-6xl mx-auto">
-<h2 class="text-3xl font-bold text-center mb-10 text-primary">Services</h2>
-
-<div class="grid md:grid-cols-2 gap-8">
-
-<div class="bg-white p-6 rounded-xl shadow">
-<h3 class="font-bold text-xl mb-2">Standard Cleaning</h3>
-<p class="text-blue-600 font-semibold mb-4">€25/hour</p>
-<p class="text-gray-600 mb-4">Perfect for maintaining a clean home.</p>
-<ul class="text-sm space-y-1">
-<li>✔ Dusting</li>
-<li>✔ Floors</li>
-<li>✔ Kitchen</li>
-<li>✔ Bathroom</li>
-</ul>
-</div>
-
-<div class="bg-white p-6 rounded-xl shadow">
-<h3 class="font-bold text-xl mb-2">Deep Cleaning</h3>
-<p class="text-blue-600 font-semibold mb-4">€30/hour</p>
-<p class="text-gray-600 mb-4">Detailed top-to-bottom cleaning.</p>
-<ul class="text-sm space-y-1">
-<li>✔ Deep scrubbing</li>
-<li>✔ Limescale removal</li>
-<li>✔ Appliances</li>
-</ul>
-</div>
-
-<div class="bg-white p-6 rounded-xl shadow border-2 border-blue-500 relative">
-<span class="absolute top-3 right-3 bg-blue-500 text-white text-xs px-3 py-1 rounded-full">Most Popular</span>
-
-<h3 class="font-bold text-xl mb-2">Regular Cleaning</h3>
-<p class="text-blue-600 font-semibold mb-4">€23/hour</p>
-<p class="text-gray-600 mb-4">Keep your home consistently clean.</p>
-<ul class="text-sm space-y-1">
-<li>✔ Weekly visits</li>
-<li>✔ Same cleaner</li>
-<li>✔ Reliable schedule</li>
-</ul>
-</div>
-
-<div class="bg-white p-6 rounded-xl shadow">
-<h3 class="font-bold text-xl mb-2">End of Tenancy</h3>
-<p class="text-blue-600 font-semibold mb-4">From €120</p>
-<p class="text-gray-600 mb-4">Perfect for moving out.</p>
-<ul class="text-sm space-y-1">
-<li>✔ Full clean</li>
-<li>✔ Ready for inspection</li>
-</ul>
-</div>
-
-</div>
-</section>
-
-<!-- TESTIMONIALS -->
-<section class="py-20 px-6 bg-white">
-<h2 class="text-3xl font-bold text-center mb-10">What Clients Say</h2>
-
-<div class="max-w-5xl mx-auto grid md:grid-cols-3 gap-6">
-<div class="p-6 shadow rounded-xl">
-<p>"Amazing service — my home has never looked better."</p>
-<p class="mt-4 font-bold">— Sarah, Delft</p>
-</div>
-
-<div class="p-6 shadow rounded-xl">
-<p>"Always reliable and super friendly. Highly recommend."</p>
-<p class="mt-4 font-bold">— Mark, Rijswijk</p>
-</div>
-
-<div class="p-6 shadow rounded-xl">
-<p>"Very detailed cleaning and great value."</p>
-<p class="mt-4 font-bold">— Lisa, Den Haag</p>
-</div>
 </div>
 </section>
 
@@ -219,12 +110,15 @@ Thank you! Your message has been sent. I’ll get back to you shortly.
 WhatsApp
 </a>
 
-<!-- SCRIPTS -->
+<!-- LANGUAGE SCRIPT -->
 <script>
 function setLang(lang){
 document.querySelectorAll('.lang').forEach(el=>el.classList.remove('active'));
 document.querySelectorAll('.'+lang).forEach(el=>el.classList.add('active'));
 }
+</script>
+
+<!-- EMAILJS -->
 <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 
 <script>
@@ -237,41 +131,25 @@ e.preventDefault();
 
 const form = this;
 
-// FIRST: Send message TO YOU
+// SEND TO YOU
 emailjs.sendForm("service_nvpdqkl", "template_1r6mpt9", form)
 .then(function(){
 
-// SECOND: Send auto-reply TO CUSTOMER
+// AUTO REPLY TO CUSTOMER
 return emailjs.sendForm("service_nvpdqkl", "template_bhn9ioo", form);
 
 })
 .then(function(){
 
-// SUCCESS MESSAGE
 document.getElementById("successMessage").classList.remove("hidden");
 form.reset();
 
 })
 .catch(function(error){
-console.error("FAILED...", error);
+console.error(error);
 alert("Something went wrong. Please try WhatsApp instead.");
 });
 
-});
-</script>
-(function(){
-emailjs.init("C4hcqNJmgh4Ix067A");
-})();
-
-document.getElementById("contact-form").addEventListener("submit", function(e){
-e.preventDefault();
-
-emailjs.sendForm("service_nvpdqkl", "template_bhn9ioo", this)
-.then(function(){
-document.getElementById("successMessage").classList.remove("hidden");
-}, function(error){
-alert("Failed to send. Try WhatsApp instead.");
-});
 });
 </script>
 
