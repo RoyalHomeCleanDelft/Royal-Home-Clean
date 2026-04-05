@@ -225,11 +225,40 @@ function setLang(lang){
 document.querySelectorAll('.lang').forEach(el=>el.classList.remove('active'));
 document.querySelectorAll('.'+lang).forEach(el=>el.classList.add('active'));
 }
-</script>
-
 <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 
 <script>
+(function(){
+emailjs.init("C4hcqNJmgh4Ix067A");
+})();
+
+document.getElementById("contact-form").addEventListener("submit", function(e){
+e.preventDefault();
+
+const form = this;
+
+// FIRST: Send message TO YOU
+emailjs.sendForm("service_nvpdqkl", "template_1r6mpt9", form)
+.then(function(){
+
+// SECOND: Send auto-reply TO CUSTOMER
+return emailjs.sendForm("service_nvpdqkl", "template_bhn9ioo", form);
+
+})
+.then(function(){
+
+// SUCCESS MESSAGE
+document.getElementById("successMessage").classList.remove("hidden");
+form.reset();
+
+})
+.catch(function(error){
+console.error("FAILED...", error);
+alert("Something went wrong. Please try WhatsApp instead.");
+});
+
+});
+</script>
 (function(){
 emailjs.init("C4hcqNJmgh4Ix067A");
 })();
