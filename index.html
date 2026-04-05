@@ -27,17 +27,14 @@ body { font-family: 'Inter', sans-serif; }
 <!-- NAV -->
 <nav class="fixed w-full bg-white/80 backdrop-blur shadow-sm z-50">
 <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-
 <div class="flex items-center gap-2">
 <span class="text-2xl">👑</span>
 <span class="font-bold text-primary text-lg">Royal Home Clean Delft</span>
 </div>
-
 <div class="flex gap-4">
 <button onclick="setLang('en')">EN</button>
 <button onclick="setLang('nl')">NL</button>
 </div>
-
 </div>
 </nav>
 
@@ -46,8 +43,8 @@ body { font-family: 'Inter', sans-serif; }
 <!-- HERO -->
 <section class="py-20 px-6">
 <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center">
-
 <div>
+
 <div class="lang en active">
 <h1 class="text-5xl font-bold mb-6 text-primary">Premium House Cleaning in Delft</h1>
 <p class="text-lg text-gray-600 mb-6">
@@ -69,9 +66,67 @@ Betrouwbare schoonmaakservice in Delft. Altijd dezelfde schoonmaker.
 Vraag een offerte
 </a>
 </div>
+
 </div>
 
 <img src="https://images.pexels.com/photos/7513046/pexels-photo-7513046.jpeg" class="rounded-2xl shadow-lg">
+</div>
+</section>
+
+<!-- SERVICES -->
+<section class="py-20 px-6 max-w-6xl mx-auto">
+<h2 class="text-3xl font-bold text-center mb-10 text-primary">Services</h2>
+
+<div class="grid md:grid-cols-2 gap-8">
+
+<div class="bg-white p-6 rounded-xl shadow">
+<h3 class="font-bold text-xl mb-2">Standard Cleaning</h3>
+<p class="text-blue-600 font-semibold mb-4">€25/hour</p>
+<p class="text-gray-600 mb-4">Perfect for maintaining a clean home.</p>
+<ul class="text-sm space-y-1">
+<li>✔ Dusting</li>
+<li>✔ Vacuuming & floors</li>
+<li>✔ Kitchen cleaning</li>
+<li>✔ Bathroom cleaning</li>
+</ul>
+</div>
+
+<div class="bg-white p-6 rounded-xl shadow">
+<h3 class="font-bold text-xl mb-2">Deep Cleaning</h3>
+<p class="text-blue-600 font-semibold mb-4">€30/hour</p>
+<p class="text-gray-600 mb-4">Detailed top-to-bottom cleaning.</p>
+<ul class="text-sm space-y-1">
+<li>✔ Deep scrubbing</li>
+<li>✔ Limescale removal</li>
+<li>✔ Appliances cleaned</li>
+<li>✔ Hard-to-reach areas</li>
+</ul>
+</div>
+
+<div class="bg-white p-6 rounded-xl shadow border-2 border-blue-500 relative">
+<span class="absolute top-3 right-3 bg-blue-500 text-white text-xs px-3 py-1 rounded-full">Most Popular</span>
+
+<h3 class="font-bold text-xl mb-2">Regular Cleaning</h3>
+<p class="text-blue-600 font-semibold mb-4">€23/hour</p>
+<p class="text-gray-600 mb-4">Keep your home consistently clean.</p>
+<ul class="text-sm space-y-1">
+<li>✔ Weekly visits</li>
+<li>✔ Same cleaner every time</li>
+<li>✔ Reliable schedule</li>
+</ul>
+</div>
+
+<div class="bg-white p-6 rounded-xl shadow">
+<h3 class="font-bold text-xl mb-2">End of Tenancy Cleaning</h3>
+<p class="text-blue-600 font-semibold mb-4">From €120</p>
+<p class="text-gray-600 mb-4">Perfect for moving out.</p>
+<ul class="text-sm space-y-1">
+<li>✔ Full deep clean</li>
+<li>✔ Ready for inspection</li>
+<li>✔ Kitchen & bathroom detail</li>
+</ul>
+</div>
+
 </div>
 </section>
 
@@ -82,7 +137,6 @@ Vraag een offerte
 <h2 class="text-3xl font-bold mb-6">Get a Quote</h2>
 
 <form id="contact-form">
-
 <input name="name" required placeholder="Name" class="w-full p-3 border rounded-lg mb-3">
 <input name="email" required type="email" placeholder="Email" class="w-full p-3 border rounded-lg mb-3">
 <textarea name="message" required placeholder="Message" class="w-full p-3 border rounded-lg mb-3"></textarea>
@@ -94,7 +148,6 @@ Send Message
 <p id="successMessage" class="hidden text-green-600 font-semibold mt-4">
 Thank you! Your message has been sent. I’ll get back to you shortly.
 </p>
-
 </form>
 
 <p class="mt-6">
@@ -105,12 +158,10 @@ Thank you! Your message has been sent. I’ll get back to you shortly.
 </div>
 </section>
 
-<!-- WHATSAPP -->
 <a href="https://wa.me/31616978993" class="fixed bottom-6 right-6 bg-green-500 text-white px-5 py-3 rounded-full shadow-lg">
 WhatsApp
 </a>
 
-<!-- LANGUAGE SCRIPT -->
 <script>
 function setLang(lang){
 document.querySelectorAll('.lang').forEach(el=>el.classList.remove('active'));
@@ -118,7 +169,6 @@ document.querySelectorAll('.'+lang).forEach(el=>el.classList.add('active'));
 }
 </script>
 
-<!-- EMAILJS -->
 <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 
 <script>
@@ -131,25 +181,18 @@ e.preventDefault();
 
 const form = this;
 
-// SEND TO YOU
 emailjs.sendForm("service_nvpdqkl", "template_1r6mpt9", form)
 .then(function(){
-
-// AUTO REPLY TO CUSTOMER
 return emailjs.sendForm("service_nvpdqkl", "template_bhn9ioo", form);
-
 })
 .then(function(){
-
 document.getElementById("successMessage").classList.remove("hidden");
 form.reset();
-
 })
 .catch(function(error){
 console.error(error);
 alert("Something went wrong. Please try WhatsApp instead.");
 });
-
 });
 </script>
 
