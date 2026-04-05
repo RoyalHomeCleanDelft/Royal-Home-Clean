@@ -27,14 +27,17 @@ body { font-family: 'Inter', sans-serif; }
 <!-- NAV -->
 <nav class="fixed w-full bg-white/80 backdrop-blur shadow-sm z-50">
 <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+
 <div class="flex items-center gap-2">
 <span class="text-2xl">👑</span>
 <span class="font-bold text-primary text-lg">Royal Home Clean Delft</span>
 </div>
-<div class="flex gap-4">
+
+<div class="flex gap-4 font-semibold">
 <button onclick="setLang('en')">EN</button>
 <button onclick="setLang('nl')">NL</button>
 </div>
+
 </div>
 </nav>
 
@@ -43,12 +46,13 @@ body { font-family: 'Inter', sans-serif; }
 <!-- HERO -->
 <section class="py-20 px-6">
 <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+
 <div>
 
 <div class="lang en active">
 <h1 class="text-5xl font-bold mb-6 text-primary">Premium House Cleaning in Delft</h1>
 <p class="text-lg text-gray-600 mb-6">
-Reliable, high-quality cleaning service in Delft. Same cleaner every time. No stress.
+Reliable, high-quality cleaning service. Same cleaner every time. No stress.
 </p>
 <p class="text-3xl font-bold text-primary mb-8">From €23 per hour</p>
 <a href="https://wa.me/31616978993" class="btn-primary text-white px-8 py-4 rounded-xl shadow-lg">
@@ -59,7 +63,7 @@ Get a Free Quote
 <div class="lang nl">
 <h1 class="text-5xl font-bold mb-6 text-primary">Premium Schoonmaak in Delft</h1>
 <p class="text-lg text-gray-600 mb-6">
-Betrouwbare schoonmaakservice in Delft. Altijd dezelfde schoonmaker.
+Betrouwbare schoonmaakservice. Altijd dezelfde schoonmaker. Geen stress.
 </p>
 <p class="text-3xl font-bold text-primary mb-8">Vanaf €23 per uur</p>
 <a href="https://wa.me/31616978993" class="btn-primary text-white px-8 py-4 rounded-xl shadow-lg">
@@ -70,7 +74,35 @@ Vraag een offerte
 </div>
 
 <img src="https://images.pexels.com/photos/7513046/pexels-photo-7513046.jpeg" class="rounded-2xl shadow-lg">
+
 </div>
+</section>
+
+<!-- ABOUT -->
+<section class="py-20 px-6 max-w-5xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+
+<img src="https://images.pexels.com/photos/6195955/pexels-photo-6195955.jpeg" class="rounded-2xl shadow">
+
+<div>
+
+<div class="lang en active">
+<h2 class="text-3xl font-bold mb-4">A Personal Cleaning Service You Can Trust</h2>
+<p class="text-gray-600">
+Hi, I’m Tatiana — the person behind Royal Home Clean Delft.
+Because I work alone, you always get the same cleaner, consistent quality, and attention to detail.
+</p>
+</div>
+
+<div class="lang nl">
+<h2 class="text-3xl font-bold mb-4">Een Persoonlijke Schoonmaakservice</h2>
+<p class="text-gray-600">
+Hallo, ik ben Tatiana — de persoon achter Royal Home Clean Delft.
+Omdat ik alleen werk, krijg je altijd dezelfde schoonmaker en constante kwaliteit.
+</p>
+</div>
+
+</div>
+
 </section>
 
 <!-- SERVICES -->
@@ -79,54 +111,90 @@ Vraag een offerte
 
 <div class="grid md:grid-cols-2 gap-8">
 
+<!-- STANDARD -->
 <div class="bg-white p-6 rounded-xl shadow">
 <h3 class="font-bold text-xl mb-2">Standard Cleaning</h3>
 <p class="text-blue-600 font-semibold mb-4">€25/hour</p>
-<p class="text-gray-600 mb-4">Perfect for maintaining a clean home.</p>
+<p class="text-gray-600 mb-4">
+Perfect for maintaining a clean and tidy home. Ideal for occasional or weekly cleaning.
+</p>
 <ul class="text-sm space-y-1">
-<li>✔ Dusting</li>
-<li>✔ Vacuuming & floors</li>
+<li>✔ Dusting all surfaces</li>
+<li>✔ Vacuuming & mopping floors</li>
 <li>✔ Kitchen cleaning</li>
 <li>✔ Bathroom cleaning</li>
 </ul>
 </div>
 
+<!-- DEEP -->
 <div class="bg-white p-6 rounded-xl shadow">
 <h3 class="font-bold text-xl mb-2">Deep Cleaning</h3>
 <p class="text-blue-600 font-semibold mb-4">€30/hour</p>
-<p class="text-gray-600 mb-4">Detailed top-to-bottom cleaning.</p>
+<p class="text-gray-600 mb-4">
+A full deep clean covering every detail of your home.
+</p>
 <ul class="text-sm space-y-1">
-<li>✔ Deep scrubbing</li>
 <li>✔ Limescale removal</li>
+<li>✔ Deep scrubbing</li>
 <li>✔ Appliances cleaned</li>
 <li>✔ Hard-to-reach areas</li>
 </ul>
 </div>
 
+<!-- REGULAR -->
 <div class="bg-white p-6 rounded-xl shadow border-2 border-blue-500 relative">
-<span class="absolute top-3 right-3 bg-blue-500 text-white text-xs px-3 py-1 rounded-full">Most Popular</span>
+<span class="absolute top-3 right-3 bg-blue-500 text-white text-xs px-3 py-1 rounded-full">
+Most Popular
+</span>
 
 <h3 class="font-bold text-xl mb-2">Regular Cleaning</h3>
 <p class="text-blue-600 font-semibold mb-4">€23/hour</p>
-<p class="text-gray-600 mb-4">Keep your home consistently clean.</p>
+<p class="text-gray-600 mb-4">
+Scheduled weekly or bi-weekly cleaning to keep your home consistently spotless.
+</p>
 <ul class="text-sm space-y-1">
-<li>✔ Weekly visits</li>
-<li>✔ Same cleaner every time</li>
+<li>✔ Same cleaner every visit</li>
 <li>✔ Reliable schedule</li>
+<li>✔ Priority availability</li>
 </ul>
 </div>
 
+<!-- TENANCY -->
 <div class="bg-white p-6 rounded-xl shadow">
 <h3 class="font-bold text-xl mb-2">End of Tenancy Cleaning</h3>
 <p class="text-blue-600 font-semibold mb-4">From €120</p>
-<p class="text-gray-600 mb-4">Perfect for moving out.</p>
+<p class="text-gray-600 mb-4">
+Perfect for moving out or preparing your home for inspection.
+</p>
 <ul class="text-sm space-y-1">
 <li>✔ Full deep clean</li>
-<li>✔ Ready for inspection</li>
-<li>✔ Kitchen & bathroom detail</li>
+<li>✔ Kitchen & bathroom detailing</li>
+<li>✔ Ready for landlord checks</li>
 </ul>
 </div>
 
+</div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="py-20 px-6 bg-white">
+<h2 class="text-3xl font-bold text-center mb-10">What Clients Say</h2>
+
+<div class="max-w-5xl mx-auto grid md:grid-cols-3 gap-6">
+<div class="p-6 shadow rounded-xl">
+<p>"Amazing service — my home has never looked better."</p>
+<p class="mt-4 font-bold">— Sarah, Delft</p>
+</div>
+
+<div class="p-6 shadow rounded-xl">
+<p>"Always reliable and super friendly. Highly recommend."</p>
+<p class="mt-4 font-bold">— Mark, Rijswijk</p>
+</div>
+
+<div class="p-6 shadow rounded-xl">
+<p>"Very detailed cleaning and great value."</p>
+<p class="mt-4 font-bold">— Lisa, Den Haag</p>
+</div>
 </div>
 </section>
 
@@ -146,7 +214,7 @@ Send Message
 </button>
 
 <p id="successMessage" class="hidden text-green-600 font-semibold mt-4">
-Thank you! Your message has been sent. I’ll get back to you shortly.
+Message sent! I’ll reply shortly.
 </p>
 </form>
 
@@ -158,10 +226,12 @@ Thank you! Your message has been sent. I’ll get back to you shortly.
 </div>
 </section>
 
+<!-- WHATSAPP -->
 <a href="https://wa.me/31616978993" class="fixed bottom-6 right-6 bg-green-500 text-white px-5 py-3 rounded-full shadow-lg">
 WhatsApp
 </a>
 
+<!-- SCRIPTS -->
 <script>
 function setLang(lang){
 document.querySelectorAll('.lang').forEach(el=>el.classList.remove('active'));
@@ -182,16 +252,13 @@ e.preventDefault();
 const form = this;
 
 emailjs.sendForm("service_nvpdqkl", "template_1r6mpt9", form)
-.then(function(){
-return emailjs.sendForm("service_nvpdqkl", "template_bhn9ioo", form);
-})
-.then(function(){
-document.getElementById("successMessage").classList.remove("hidden");
+.then(() => {
+emailjs.sendForm("service_nvpdqkl", "template_bhn9ioo", form);
 form.reset();
+document.getElementById("successMessage").classList.remove("hidden");
 })
-.catch(function(error){
-console.error(error);
-alert("Something went wrong. Please try WhatsApp instead.");
+.catch(() => {
+alert("Something went wrong. Please try WhatsApp.");
 });
 });
 </script>
