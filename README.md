@@ -1,6 +1,6 @@
 # 👑 Royal Home Clean Delft - Premium Cleaning Services
 
-A high-converting, SEO-optimized, bilingual (EN/NL) landing page for Tatiana's premium cleaning business in Delft. This site is built for speed, elegance, and lead generation.
+A high-converting, SEO-optimized, bilingual (EN/NL) landing page for a house cleaning business in Delft. This site is built for speed and lead generation.
 
 ## 🚀 Live Features
 * **Bilingual Toggle:** Seamless switching between English and Dutch without page reloads.
@@ -23,7 +23,7 @@ This site is engineered to rank for high-volume Dutch cleaning keywords:
 ## ⚙️ Configuration & Maintenance
 
 ### 1. Contact Form (EmailJS)
-The form is currently linked to Tatiana's EmailJS account. To update the recipient:
+The form is currently linked to a EmailJS account. To update the recipient:
 1.  Go to the `<script>` section at the bottom of the HTML.
 2.  Update the `emailjs.init("YOUR_PUBLIC_KEY")`.
 3.  Update the `service_ID` and `template_ID` in the `emailjs.sendForm` function.
