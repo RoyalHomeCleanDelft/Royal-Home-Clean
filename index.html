@@ -12,9 +12,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <title>Royal Home Clean Delft | Schoonmaakbedrijf voor Particulieren</title>
-    <meta name="description" content="Professioneel schoonmaakbedrijf in Delft voor particulieren, gezinnen & studenten. Premium house cleaning service, move out cleaning & opleveringsschoonmaak.">
-    <meta name="keywords" content="house cleaning service, schoonmaak bedrijf, schoonmaakbedrijf delft, schoonmaakbedrijf, schoonmaakbedrijf voor particulieren, opleveringsschoonmaak, move out cleaning, move in move out cleaning, end of tenancy cleaning">
+    <meta name="description" content="Professioneel schoonmaakbedrijf in Delft voor particulieren, gezinnen & studenten. Premium house cleaning service, move out cleaning & tapijtreiniging.">
+    <meta name="keywords" content="house cleaning service, schoonmaak bedrijf, schoonmaakbedrijf delft, schoonmaakbedrijf voor particulieren, opleveringsschoonmaak, move out cleaning, carpet cleaning delft, tapijtreiniging delft">
     
+    <meta property="og:title" content="Royal Home Clean Delft | Premium House Cleaning">
+    <meta property="og:description" content="Hét schoonmaakbedrijf voor particulieren en studenten in Delft. Boek vandaag nog voor een stralend schoon huis!">
+    <meta property="og:image" content="https://images.pexels.com/photos/6195276/pexels-photo-6195276.jpeg">
+    <meta property="og:url" content="https://www.royalhomecleandelft.nl/">
+    <meta property="og:type" content="website">
+
     <link rel="preload" as="image" href="https://images.pexels.com/photos/6195276/pexels-photo-6195276.jpeg">
 
     <script type="application/ld+json">
@@ -59,6 +65,10 @@
           {
             "@type": "Offer",
             "itemOffered": { "@type": "Service", "name": "Move out cleaning Delft" }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": { "@type": "Service", "name": "Carpet cleaning Delft" }
           }
         ]
       }
@@ -80,9 +90,11 @@
         
         .lang { display:none; opacity: 0; transition: opacity 0.4s ease; }
         .lang.active { display:block; opacity: 1; }
+        span.lang, a.lang { display: none; }
+        span.lang.active, a.lang.active { display: inline-block; opacity: 1; }
 
         .glass-nav {
-            background: rgba(255, 255, 255, 0.85);
+            background: rgba(255, 255, 255, 0.90);
             backdrop-filter: blur(16px);
             -webkit-backdrop-filter: blur(16px);
         }
@@ -101,6 +113,10 @@
             box-shadow: 0 25px 30px -5px rgba(0, 0, 0, 0.1), 0 15px 15px -5px rgba(0, 0, 0, 0.04);
             border-color: #bfdbfe;
         }
+
+        /* Custom details marker for FAQ */
+        details > summary { list-style: none; }
+        details > summary::-webkit-details-marker { display: none; }
     </style>
 </head>
 
@@ -108,25 +124,33 @@
 
 <nav class="fixed w-full z-50 glass-nav border-b border-slate-200/50 shadow-sm">
     <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-        <div class="flex items-center gap-3 group cursor-pointer" onclick="window.scrollTo(0,0)" aria-label="Scroll to top">
+        <a href="/" class="flex items-center gap-3 group cursor-pointer" aria-label="Home">
             <div class="bg-blue-900 p-2.5 rounded-xl group-hover:rotate-12 group-hover:scale-110 transition-all shadow-md">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                     <path d="M2.25 4.5l3.5 11h12.5l3.5-11-5.75 6.5L12 3l-4 8L2.25 4.5zM3 18h18v2H3v-2z"/>
                 </svg>
             </div>
-            <span class="font-bold text-blue-900 text-xl tracking-tight">Royal Home Clean <span class="text-blue-500 font-medium">Delft</span></span>
-        </div>
+            <span class="font-bold text-blue-900 text-xl tracking-tight hidden sm:block">Royal Home Clean <span class="text-blue-500 font-medium">Delft</span></span>
+        </a>
 
         <div class="flex items-center gap-4 sm:gap-6">
-            <div class="hidden md:flex gap-8 text-sm font-semibold text-slate-600" role="navigation" aria-label="Main navigation">
-                <a href="#services" class="hover:text-blue-600 transition-colors">Services</a>
-                <a href="#about" class="hover:text-blue-600 transition-colors">About</a>
-                <a href="#contact" class="hover:text-blue-600 transition-colors">Contact</a>
+            <div class="hidden md:flex gap-6 lg:gap-8 text-sm font-semibold text-slate-600 items-center" role="navigation" aria-label="Main navigation">
+                <a href="#services" class="hover:text-blue-600 transition-colors lang en active">Services</a>
+                <a href="#services" class="hover:text-blue-600 transition-colors lang nl">Diensten</a>
+                
+                <a href="/move-out-cleaning" class="hover:text-blue-600 transition-colors lang en active">Move-Out</a>
+                <a href="/move-out-cleaning" class="hover:text-blue-600 transition-colors lang nl">Oplevering</a>
+                
+                <a href="/tapijtreinigen-delft" class="hover:text-blue-600 transition-colors lang en active">Carpet Cleaning</a>
+                <a href="/tapijtreinigen-delft" class="hover:text-blue-600 transition-colors lang nl">Tapijtreiniging</a>
+                
+                <a href="#contact" class="px-4 py-2 bg-blue-50 text-blue-900 rounded-full hover:bg-blue-100 transition-colors lang en active">Contact</a>
+                <a href="#contact" class="px-4 py-2 bg-blue-50 text-blue-900 rounded-full hover:bg-blue-100 transition-colors lang nl">Contact</a>
             </div>
             
             <div class="flex bg-slate-200/70 rounded-full p-1 border border-slate-200" aria-label="Language selection">
                 <button onclick="setLang('en')" id="btn-en" class="px-3 sm:px-5 py-1.5 rounded-full text-xs font-bold transition-all bg-white shadow-sm text-blue-900" aria-label="Switch to English">EN</button>
-                <button onclick="setLang('nl')" id="btn-nl" class="px-3 sm:px-5 py-1.5 rounded-full text-xs font-bold transition-all text-slate-500" aria-label="Switch to Dutch">NL</button>
+                <button onclick="setLang('nl')" id="btn-nl" class="px-3 sm:px-5 py-1.5 rounded-full text-xs font-bold transition-all text-slate-500 hover:text-blue-900" aria-label="Switch to Dutch">NL</button>
             </div>
 
             <button id="mobile-menu-btn" class="md:hidden flex items-center justify-center p-2 text-blue-900 focus:outline-none" aria-label="Toggle mobile menu">
@@ -137,10 +161,17 @@
         </div>
     </div>
 
-    <div id="mobile-dropdown" class="hidden md:hidden absolute w-full bg-white border-t border-slate-100 shadow-xl pb-4 pt-2 px-6 flex-col gap-4 text-center font-bold text-slate-700">
-        <a href="#services" class="mobile-link block py-3 hover:text-blue-600 hover:bg-slate-50 rounded-xl transition-colors">Services</a>
-        <a href="#about" class="mobile-link block py-3 hover:text-blue-600 hover:bg-slate-50 rounded-xl transition-colors">About</a>
-        <a href="#contact" class="mobile-link block py-3 hover:text-blue-600 hover:bg-slate-50 rounded-xl transition-colors">Contact</a>
+    <div id="mobile-dropdown" class="hidden md:hidden absolute w-full bg-white border-t border-slate-100 shadow-xl pb-4 pt-2 px-6 flex-col gap-2 text-center font-bold text-slate-700">
+        <a href="#services" class="mobile-link block py-3 hover:text-blue-600 hover:bg-slate-50 rounded-xl transition-colors lang en active">Services</a>
+        <a href="#services" class="mobile-link block py-3 hover:text-blue-600 hover:bg-slate-50 rounded-xl transition-colors lang nl">Diensten</a>
+        
+        <a href="/move-out-cleaning" class="mobile-link block py-3 hover:text-blue-600 hover:bg-slate-50 rounded-xl transition-colors lang en active">Move-Out Cleaning</a>
+        <a href="/move-out-cleaning" class="mobile-link block py-3 hover:text-blue-600 hover:bg-slate-50 rounded-xl transition-colors lang nl">Opleveringsschoonmaak</a>
+        
+        <a href="/tapijtreinigen-delft" class="mobile-link block py-3 hover:text-blue-600 hover:bg-slate-50 rounded-xl transition-colors lang en active">Carpet Cleaning</a>
+        <a href="/tapijtreinigen-delft" class="mobile-link block py-3 hover:text-blue-600 hover:bg-slate-50 rounded-xl transition-colors lang nl">Tapijtreiniging</a>
+        
+        <a href="#contact" class="mobile-link block py-3 text-blue-600 bg-blue-50 hover:bg-blue-100 rounded-xl transition-colors">Contact</a>
     </div>
 </nav>
 
@@ -158,7 +189,7 @@
                     </div>
                     
                     <div class="bg-blue-50 border border-blue-100 p-5 rounded-2xl shadow-sm text-blue-900 font-medium text-base mb-8 max-w-lg">
-                        <p>Moving in or out of your home? We offer expert <a href="#services" class="font-bold text-blue-600 hover:text-blue-800 underline transition-colors">move in move out cleaning</a> and end of tenancy cleaning to make sure your property is spotless for the final inspection!</p>
+                        <p>Moving in or out of your home? We offer expert <a href="/move-out-cleaning" class="font-bold text-blue-600 hover:text-blue-800 underline transition-colors">move in move out cleaning</a> and end of tenancy cleaning to make sure your property is spotless for the final inspection!</p>
                     </div>
 
                     <div class="text-base lg:text-lg text-slate-600 mb-8 leading-relaxed max-w-lg">
@@ -166,7 +197,7 @@
                     </div>
 
                     <div class="flex flex-col sm:flex-row gap-5 items-start sm:items-center">
-                        <a href="#contact" class="px-8 py-4 bg-blue-900 text-white rounded-2xl font-bold shadow-xl shadow-blue-900/30 hover:bg-blue-800 hover:-translate-y-1 transition-all text-center">Contact Us</a>
+                        <a href="#contact" class="px-8 py-4 bg-blue-900 text-white rounded-2xl font-bold shadow-xl shadow-blue-900/30 hover:bg-blue-800 hover:-translate-y-1 transition-all text-center">Get a Free Quote</a>
                         <div class="flex items-center gap-3 px-4 py-2">
                             <span class="text-3xl font-extrabold text-blue-900">€25</span>
                             <span class="text-slate-500 text-sm font-medium leading-snug">per hour / <br>starting price</span>
@@ -183,7 +214,7 @@
                     </div>
 
                     <div class="bg-blue-50 border border-blue-100 p-5 rounded-2xl shadow-sm text-blue-900 font-medium text-base mb-8 max-w-lg">
-                        <p>Gaat u verhuizen? Wij bieden een professionele <a href="#services" class="font-bold text-blue-600 hover:text-blue-800 underline transition-colors">opleveringsschoonmaak</a> om ervoor te zorgen dat uw woning vlekkeloos wordt opgeleverd aan de verhuurder of nieuwe koper!</p>
+                        <p>Gaat u verhuizen? Wij bieden een professionele <a href="/move-out-cleaning" class="font-bold text-blue-600 hover:text-blue-800 underline transition-colors">opleveringsschoonmaak</a> om ervoor te zorgen dat uw woning vlekkeloos wordt opgeleverd aan de verhuurder of nieuwe koper!</p>
                     </div>
 
                     <div class="text-base lg:text-lg text-slate-600 mb-8 leading-relaxed max-w-lg">
@@ -191,7 +222,7 @@
                     </div>
 
                     <div class="flex flex-col sm:flex-row gap-5 items-start sm:items-center">
-                        <a href="#contact" class="px-8 py-4 bg-blue-900 text-white rounded-2xl font-bold shadow-xl shadow-blue-900/30 hover:bg-blue-800 hover:-translate-y-1 transition-all text-center">Neem Contact Op</a>
+                        <a href="#contact" class="px-8 py-4 bg-blue-900 text-white rounded-2xl font-bold shadow-xl shadow-blue-900/30 hover:bg-blue-800 hover:-translate-y-1 transition-all text-center">Offerte Aanvragen</a>
                         <div class="flex items-center gap-3 px-4 py-2">
                             <span class="text-3xl font-extrabold text-blue-900">€25</span>
                             <span class="text-slate-500 text-sm font-medium leading-snug">per uur / <br>vanafprijs</span>
@@ -204,17 +235,17 @@
                 <div class="absolute -bottom-8 -left-8 bg-white p-6 rounded-2xl shadow-xl z-20 hidden md:block border border-slate-50">
                     <div class="flex items-center gap-4">
                         <div class="flex -space-x-4">
-                            <img class="w-12 h-12 rounded-full border-2 border-white shadow-sm" src="https://i.pravatar.cc/100?img=1" alt="Profile picture of a satisfied Royal Home Clean customer">
-                            <img class="w-12 h-12 rounded-full border-2 border-white shadow-sm" src="https://i.pravatar.cc/100?img=5" alt="Profile picture of a happy Delft homeowner">
-                            <img class="w-12 h-12 rounded-full border-2 border-white shadow-sm" src="https://i.pravatar.cc/100?img=9" alt="Profile picture of a local domestic help client">
+                            <img class="w-12 h-12 rounded-full border-2 border-white shadow-sm" src="https://i.pravatar.cc/100?img=1" alt="Satisfied customer">
+                            <img class="w-12 h-12 rounded-full border-2 border-white shadow-sm" src="https://i.pravatar.cc/100?img=5" alt="Delft homeowner">
+                            <img class="w-12 h-12 rounded-full border-2 border-white shadow-sm" src="https://i.pravatar.cc/100?img=9" alt="Local client">
                         </div>
                         <div>
+                            <div class="flex text-yellow-400 text-sm mb-1">★★★★★</div>
                             <p class="text-sm font-extrabold text-blue-900">50+ Happy Homes</p>
-                            <p class="text-xs text-slate-500 font-medium">In Delft & surrounding areas</p>
                         </div>
                     </div>
                 </div>
-                <img src="https://images.pexels.com/photos/6195276/pexels-photo-6195276.jpeg" alt="Professional house cleaning service cleaners in Delft ready to provide premium service" class="rounded-[2.5rem] shadow-2xl relative z-10 w-full object-cover h-[550px] brightness-105">
+                <img src="https://images.pexels.com/photos/6195276/pexels-photo-6195276.jpeg" alt="Professional house cleaning service cleaners in Delft" class="rounded-[2.5rem] shadow-2xl relative z-10 w-full object-cover h-[550px] brightness-105">
             </div>
         </div>
     </section>
@@ -244,7 +275,6 @@
             </div>
 
             <div class="grid md:grid-cols-3 gap-8">
-                
                 <div class="service-card bg-white p-8 rounded-3xl border-2 border-blue-900 relative shadow-xl scale-105 z-10 flex flex-col" data-aos="fade-up" data-aos-delay="100">
                     <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-blue-900 text-white text-[10px] px-5 py-1.5 rounded-full uppercase tracking-widest font-bold shadow-md whitespace-nowrap">
                         <span class="lang en active">Most Popular</span>
@@ -388,6 +418,7 @@
                             alt="Professional carpet cleaning service in Delft"
                             loading="lazy"
                             class="relative rounded-[2rem] object-cover h-64 w-full md:h-80 shadow-inner"
+                            onerror="this.src='tapijt reinigen delft 2-shot.png'"
                         >
 
                         <div class="absolute -top-4 -left-4 bg-blue-900 text-white px-6 py-2 rounded-full font-bold shadow-xl -rotate-3">
@@ -512,7 +543,7 @@
         <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-16">
             <div class="md:w-1/2 relative" data-aos="fade-right">
                 <div class="absolute -inset-4 bg-blue-900 rounded-[3rem] rotate-3 -z-10 shadow-lg"></div>
-                <img src="https://images.pexels.com/photos/6195955/pexels-photo-6195955.jpeg" alt="Professional schoonmaakbedrijf in Delft cleaners, smiling while holding cleaning supplies" loading="lazy" class="rounded-[2.5rem] shadow-xl w-full grayscale-[20%] hover:grayscale-0 transition-all duration-700">
+                <img src="https://images.pexels.com/photos/6195955/pexels-photo-6195955.jpeg" alt="Professional house cleaners in Delft smiling" loading="lazy" class="rounded-[2.5rem] shadow-xl w-full grayscale-[20%] hover:grayscale-0 transition-all duration-700">
             </div>
             <div class="md:w-1/2" data-aos="fade-left">
                 <div class="lang en active">
@@ -568,6 +599,57 @@
         </div>
     </section>
 
+    <section class="py-20 px-6 bg-white border-b border-slate-100">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-12" data-aos="fade-up">
+                <div class="lang en active">
+                    <h2 class="text-3xl font-bold text-blue-900 mb-4">Frequently Asked Questions</h2>
+                </div>
+                <div class="lang nl">
+                    <h2 class="text-3xl font-bold text-blue-900 mb-4">Veelgestelde Vragen</h2>
+                </div>
+            </div>
+
+            <div class="space-y-4" data-aos="fade-up" data-aos-delay="100">
+                <details class="group bg-slate-50 p-6 rounded-2xl cursor-pointer hover:bg-slate-100 transition-colors">
+                    <summary class="font-bold text-blue-900 flex justify-between items-center text-lg outline-none">
+                        <span class="lang en active">Do I need to be home during the cleaning?</span>
+                        <span class="lang nl">Moet ik thuis zijn tijdens de schoonmaak?</span>
+                        <span class="text-blue-500 group-open:rotate-45 transition-transform text-2xl">+</span>
+                    </summary>
+                    <div class="mt-4 text-slate-600 leading-relaxed">
+                        <span class="lang en active">Not at all! Many of our clients provide us with a spare key or let us in before heading to work. We are fully background-checked and trustworthy.</span>
+                        <span class="lang nl">Zeker niet! Veel van onze klanten geven ons een reservesleutel of laten ons binnen voordat ze naar werk gaan. Wij zijn volledig gescreend en 100% betrouwbaar.</span>
+                    </div>
+                </details>
+
+                <details class="group bg-slate-50 p-6 rounded-2xl cursor-pointer hover:bg-slate-100 transition-colors">
+                    <summary class="font-bold text-blue-900 flex justify-between items-center text-lg outline-none">
+                        <span class="lang en active">Do you bring your own cleaning supplies?</span>
+                        <span class="lang nl">Nemen jullie eigen schoonmaakmiddelen mee?</span>
+                        <span class="text-blue-500 group-open:rotate-45 transition-transform text-2xl">+</span>
+                    </summary>
+                    <div class="mt-4 text-slate-600 leading-relaxed">
+                        <span class="lang en active">Yes, we come fully equipped with premium, professional-grade cleaning supplies and a high-quality vacuum cleaner. If you prefer us to use your specific products (e.g., eco-friendly or allergy-safe), just let us know!</span>
+                        <span class="lang nl">Ja, wij nemen onze eigen professionele schoonmaakmiddelen en een hoogwaardige stofzuiger mee. Mocht u liever hebben dat wij uw eigen (bijv. eco-vriendelijke) producten gebruiken, laat het ons dan weten!</span>
+                    </div>
+                </details>
+
+                <details class="group bg-slate-50 p-6 rounded-2xl cursor-pointer hover:bg-slate-100 transition-colors">
+                    <summary class="font-bold text-blue-900 flex justify-between items-center text-lg outline-none">
+                        <span class="lang en active">Are your cleaning teams insured?</span>
+                        <span class="lang nl">Zijn jullie schoonmakers verzekerd?</span>
+                        <span class="text-blue-500 group-open:rotate-45 transition-transform text-2xl">+</span>
+                    </summary>
+                    <div class="mt-4 text-slate-600 leading-relaxed">
+                        <span class="lang en active">Absolutely. We are fully insured, giving you complete peace of mind while we refresh your home.</span>
+                        <span class="lang nl">Absoluut. Wij zijn volledig verzekerd, zodat u uw huis met een gerust hart aan ons kunt toevertrouwen.</span>
+                    </div>
+                </details>
+            </div>
+        </div>
+    </section>
+
     <section id="contact" class="py-24 px-6 bg-slate-50">
         <div class="max-w-5xl mx-auto">
             <div class="bg-white rounded-[3rem] shadow-2xl overflow-hidden flex flex-col md:flex-row border border-slate-100">
@@ -616,6 +698,8 @@
                     </div>
 
                     <form id="contact-form" class="space-y-5">
+                        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+
                         <div>
                             <select name="service" required 
                                 class="w-full p-4 bg-slate-50 border border-slate-200 rounded-2xl focus:ring-2 focus:ring-blue-500 focus:bg-white outline-none transition-all text-slate-700 appearance-none cursor-pointer">
@@ -625,6 +709,7 @@
                                 <option value="Maintenance Cleaning">Regular Cleaning / Reguliere Schoonmaak</option>
                                 <option value="Deep Clean">Deep Clean / Dieptereiniging</option>
                                 <option value="Move Out Cleaning">Move Out Cleaning / Opleveringsschoonmaak</option>
+                                <option value="Carpet Cleaning">Carpet Cleaning / Tapijtreiniging</option>
                             </select>
                         </div>
 
@@ -667,7 +752,7 @@
 </main>
 
 <footer class="py-12 bg-white text-center text-slate-500 text-sm border-t border-slate-200">
-    <p class="font-medium">© 2024 Royal Home Clean Delft. Premium House Cleaning Services.</p>
+    <p class="font-medium">© 2026 Royal Home Clean Delft. Premium House Cleaning Services.</p>
     <div class="mt-6 flex justify-center gap-6 text-slate-400 font-medium">
         <span class="hover:text-blue-900 cursor-default transition-colors">Tanthof</span> • 
         <span class="hover:text-blue-900 cursor-default transition-colors">Voorhof</span> • 
@@ -725,11 +810,18 @@ function setLang(lang){
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    const userLang = navigator.language || navigator.userLanguage;
-    if (userLang.toLowerCase().includes('nl')) {
-        setLang('nl');
+    const urlParams = new URLSearchParams(window.location.search);
+    const urlLang = urlParams.get('lang');
+    
+    if (urlLang === 'nl' || urlLang === 'en') {
+        setLang(urlLang);
     } else {
-        setLang('en');
+        const userLang = navigator.language || navigator.userLanguage;
+        if (userLang.toLowerCase().includes('nl')) {
+            setLang('nl');
+        } else {
+            setLang('en');
+        }
     }
 });
 </script>
@@ -743,6 +835,13 @@ document.addEventListener('DOMContentLoaded', () => {
 document.getElementById("contact-form").addEventListener("submit", function(e){
     e.preventDefault();
     const form = this;
+    
+    // Honeypot check - if a bot fills out the hidden field, stop the form from sending
+    if(form.elements["_honey"].value !== "") {
+        console.warn("Spam bot detected!");
+        return false;
+    }
+
     const btn = form.querySelector('button[type="submit"]');
     
     const originalText = btn.innerHTML;
