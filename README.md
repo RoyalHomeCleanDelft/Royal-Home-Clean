@@ -1,6 +1,6 @@
 # 👑 Royal Home Clean Delft - Premium Multi-Page Cleaning Website
 
-A high-converting, SEO-optimized, bilingual (EN/NL) platform for a premium professional cleaning business in Delft. This site utilizes a modern multi-page structure and advanced indexing rules to maximize local search visibility.
+A high-converting, SEO-optimized, bilingual (EN/NL) platform for a premium professional house cleaning business in Delft. This site utilizes a modern multi-page structure and advanced indexing rules to maximize local search visibility.
 
 ## 🚀 Live Features
 
