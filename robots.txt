@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Stop Google from indexing language variants as separate pages
+Disallow: /*?lang=
+
+# Link to your new sitemap
+Sitemap: https://www.royalhomecleandelft.nl/sitemap.xml
