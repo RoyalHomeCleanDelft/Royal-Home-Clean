@@ -1,8 +1,18 @@
+# Royal Home Clean Delft - Robots.txt
+# Optimized for Hub & Spoke SEO Architecture
+
 User-agent: *
+# Allow crawling of all pages to ensure the Hub and Spokes are indexed
 Allow: /
 
-# Stop Google from indexing language variants as separate pages
-Disallow: /*?lang=
+# Disallow system files, hidden assets, or temporary folders if you have them
+Disallow: /cgi-bin/
+Disallow: /temp/
+Disallow: /backup/
+Disallow: /private/
 
-# Link to your new sitemap
+# Explicitly map the Sitemap for efficiency
 Sitemap: https://www.royalhomecleandelft.nl/sitemap.xml
+
+# Crawl delay for bots to save bandwidth (optional, but good for smaller sites)
+Crawl-delay: 1
