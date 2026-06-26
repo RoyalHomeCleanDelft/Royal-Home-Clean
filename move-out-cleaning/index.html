@@ -7,7 +7,7 @@
     <meta name="description" content="Top-rated move out cleaning services in Delft. Secure your deposit with our expert end of tenancy cleaners. Opleveringsschoonmaak particulier vanaf €120. Book now!">
     <meta name="keywords" content="end of tenancy cleaning, move out cleaning, opleveringsschoonmaak, oplevering schoonmaak, move in move out cleaning, move out cleaning services, opleveringsschoonmaak particulier, opleveringsschoonmaak kosten, move out house cleaning, end of tenancy cleaners, move out cleaning service, Delft">
     
-    <link rel="icon" type="image/png" href="/favicon.png">
+    <link class="lang en active" rel="icon" type="image/png" href="/favicon.png">
     
     <link rel="canonical" href="https://www.royalhomecleandelft.nl/move-out-cleaning" />
     <link rel="alternate" hreflang="nl" href="https://www.royalhomecleandelft.nl/move-out-cleaning?lang=nl" />
@@ -170,7 +170,7 @@
                     <p class="text-lg font-medium text-slate-600 mt-4 mb-6">Vakkundige oplevering schoonmaak voor uw gemoedsrust.</p>
 
                     <div class="text-base lg:text-lg text-slate-600 mb-6 leading-relaxed max-w-lg space-y-4">
-                        <p>Gaat u verhuizen en wilt u zeker zijn dat u uw borg terugkrijgt? Een grondige <strong>oplevering schoonmaak</strong> is cruciaal. Wij zijn gespecialiseerd in het bezemschoon en vlekkeloos achterlaten van woningen voor studenten, expats en families in Delft.</p>
+                        <p>Gaat u verhuizen en wilt u zeker zijn dat u uw borg terugkrijgt? Een grondige <strong>oplevering schoonmaak</strong> is cruciaal. Wij zijn gespecialiseerd in het bezemschoon en vlekkeloos achterlaten van woningen voor studenten, expats und families in Delft.</p>
                         <p>Met onze transparante <strong>opleveringsschoonmaak kosten</strong> komt u nooit voor verrassingen te staan. Onze experts weten precies waar verhuurders op letten tijdens de eindinspectie.</p>
                     </div>
 
@@ -362,22 +362,30 @@
                         <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
 
                         <div>
-                            <select name="service" required class="w-full p-4 bg-slate-50 border border-slate-200 rounded-2xl focus:ring-2 focus:ring-blue-500 focus:bg-white outline-none transition-all text-slate-700 appearance-none cursor-pointer">
-                                <option value="Move Out Cleaning" selected>Move Out Cleaning / Opleveringsschoonmaak</option>
-                                <option value="Deep Clean">Deep Clean / Dieptereiniging</option>
-                                <option value="Maintenance Cleaning">Regular Cleaning / Reguliere Schoonmaak</option>
-                                <option value="Carpet Cleaning">Carpet Cleaning / Tapijtreiniging</option>
+                            <select name="service" required class="lang en active w-full p-4 bg-slate-50 border border-slate-200 rounded-2xl focus:ring-2 focus:ring-blue-500 focus:bg-white outline-none transition-all text-slate-700 appearance-none cursor-pointer">
+                                <option value="Move Out Cleaning" selected>Move Out Cleaning</option>
+                                <option value="Deep Clean">Deep Clean</option>
+                                <option value="Maintenance Cleaning">Regular Cleaning</option>
+                                <option value="Carpet Cleaning">Carpet Cleaning</option>
+                            </select>
+                            <select name="service" required disabled class="lang nl w-full p-4 bg-slate-50 border border-slate-200 rounded-2xl focus:ring-2 focus:ring-blue-500 focus:bg-white outline-none transition-all text-slate-700 appearance-none cursor-pointer">
+                                <option value="Move Out Cleaning" selected>Opleveringsschoonmaak</option>
+                                <option value="Deep Clean">Dieptereiniging</option>
+                                <option value="Maintenance Cleaning">Reguliere Schoonmaak</option>
+                                <option value="Carpet Cleaning">Tapijtreiniging</option>
                             </select>
                         </div>
                         <div>
-                            <input name="name" required placeholder="Name / Naam" aria-label="Your Name" class="w-full p-4 bg-slate-50 border border-slate-200 rounded-2xl focus:ring-2 focus:ring-blue-500 focus:bg-white outline-none transition-all text-slate-700 placeholder-slate-400">
+                            <input name="name" required placeholder="Name" aria-label="Your Name" class="lang en active w-full p-4 bg-slate-50 border border-slate-200 rounded-2xl focus:ring-2 focus:ring-blue-500 focus:bg-white outline-none transition-all text-slate-700 placeholder-slate-400">
+                            <input name="name" required disabled placeholder="Naam" aria-label="Uw Naam" class="lang nl w-full p-4 bg-slate-50 border border-slate-200 rounded-2xl focus:ring-2 focus:ring-blue-500 focus:bg-white outline-none transition-all text-slate-700 placeholder-slate-400">
                         </div>
                         <div>
-                            <input name="email" required type="email" placeholder="Email Address" aria-label="Your Email" class="w-full p-4 bg-slate-50 border border-slate-200 rounded-2xl focus:ring-2 focus:ring-blue-500 focus:bg-white outline-none transition-all text-slate-700 placeholder-slate-400">
+                            <input name="email" required type="email" placeholder="Email Address" aria-label="Your Email" class="lang en active w-full p-4 bg-slate-50 border border-slate-200 rounded-2xl focus:ring-2 focus:ring-blue-500 focus:bg-white outline-none transition-all text-slate-700 placeholder-slate-400">
+                            <input name="email" required type="email" disabled placeholder="E-mailadres" aria-label="Uw E-mailadres" class="lang nl w-full p-4 bg-slate-50 border border-slate-200 rounded-2xl focus:ring-2 focus:ring-blue-500 focus:bg-white outline-none transition-all text-slate-700 placeholder-slate-400">
                         </div>
                         <div>
                             <textarea name="message" placeholder="Size of your room/house? Any specific heavy cleaning areas?" aria-label="Your Message" class="lang en active w-full p-4 bg-slate-50 border border-slate-200 rounded-2xl h-32 focus:ring-2 focus:ring-blue-500 focus:bg-white outline-none transition-all resize-none text-slate-700 placeholder-slate-400"></textarea>
-                            <textarea name="message" placeholder="Grootte van uw kamer/woning? Specifieke aandachtsgebieden?" aria-label="Uw Bericht" class="lang nl w-full p-4 bg-slate-50 border border-slate-200 rounded-2xl h-32 focus:ring-2 focus:ring-blue-500 focus:bg-white outline-none transition-all resize-none text-slate-700 placeholder-slate-400"></textarea>
+                            <textarea name="message" disabled placeholder="Grootte van uw kamer/woning? Specifieke aandachtsgebieden?" aria-label="Uw Bericht" class="lang nl w-full p-4 bg-slate-50 border border-slate-200 rounded-2xl h-32 focus:ring-2 focus:ring-blue-500 focus:bg-white outline-none transition-all resize-none text-slate-700 placeholder-slate-400"></textarea>
                         </div>
                         <div>
                             <button type="submit" class="w-full bg-blue-900 text-white font-bold text-xl tracking-wide py-4 rounded-2xl shadow-lg hover:bg-blue-800 hover:-translate-y-1 transition-all active:scale-[0.98]">
@@ -390,8 +398,8 @@
                             </p>
                         </div>
                         <p id="successMessage" class="hidden text-emerald-600 font-bold text-center mt-6 bg-emerald-50 p-4 rounded-xl border border-emerald-100" role="alert">
-                            <span class="lang en active">✨ Message sent! We'll contact you shortly.</span>
-                            <span class="lang nl">✨ Bericht verzonden! We nemen snel contact op.</span>
+                    		<span class="lang en active">✨ Message sent! We'll contact you shortly.</span>
+                    		<span class="lang nl">✨ Bericht verzonden! We nemen snel contact op.</span>
                         </p>
                     </form>
                 </div>
@@ -459,8 +467,21 @@ mobileLinks.forEach(link => {
 
 // Language Logic
 function setLang(lang){
-    document.querySelectorAll('.lang').forEach(el => el.classList.remove('active'));
-    document.querySelectorAll('.'+lang).forEach(el => el.classList.add('active'));
+    document.querySelectorAll('.lang').forEach(el => {
+        el.classList.remove('active');
+        // Disable form inputs belonging to the alternate language to prevent validation conflicts
+        if (el.tagName === 'INPUT' || el.tagName === 'SELECT' || el.tagName === 'TEXTAREA') {
+            el.disabled = true;
+        }
+    });
+    
+    document.querySelectorAll('.'+lang).forEach(el => {
+        el.classList.add('active');
+        // Enable form inputs matching the currently active language context
+        if (el.tagName === 'INPUT' || el.tagName === 'SELECT' || el.tagName === 'TEXTAREA') {
+            el.disabled = false;
+        }
+    });
     
     const btnEn = document.getElementById('btn-en');
     const btnNl = document.getElementById('btn-nl');
