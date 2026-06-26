@@ -47,7 +47,7 @@
     </script>
 
     <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <style>
@@ -320,92 +320,42 @@
         </div>
     </section>
 
-    <section id="contact" class="py-16 px-6 bg-slate-50 border-t border-slate-200">
-        <div class="max-w-5xl mx-auto">
-            <div class="bg-white rounded-[3rem] shadow-2xl overflow-hidden flex flex-col md:flex-row border border-slate-100">
-                <div class="md:w-2/5 bg-blue-900 p-12 text-white flex flex-col justify-center relative overflow-hidden">
-                    <div class="absolute -right-20 -bottom-20 opacity-10" aria-hidden="true">
-                        <svg width="200" height="200" viewBox="0 0 24 24" fill="white"><path d="M2.25 4.5l3.5 11h12.5l3.5-11-5.75 6.5L12 3l-4 8L2.25 4.5zM3 18h18v2H3v-2z"/></svg>
-                    </div>
-                    <div class="lang en active">
-                        <h2 class="text-4xl font-bold mb-8">Book Cleaning</h2>
-                    </div>
-                    <div class="lang nl">
-                        <h2 class="text-4xl font-bold mb-8">Schoonmaak Boeken</h2>
-                    </div>
-                    
-                    <div class="space-y-8 text-base z-10">
-                        <div class="flex items-center gap-4">
-                            <div class="w-10 h-10 bg-blue-800 rounded-full flex items-center justify-center text-xl shadow-inner" aria-hidden="true">📍</div>
-                            <span class="lang en active font-medium">Delft & surrounding areas</span>
-                            <span class="lang nl font-medium">Delft & omstreken</span>
-                        </div>
-                        <a href="tel:+31616978993" class="flex items-center gap-4 hover:text-blue-300 transition-colors group">
-                            <div class="w-10 h-10 bg-blue-800 rounded-full flex items-center justify-center text-xl shadow-inner group-hover:bg-blue-700 transition-colors" aria-hidden="true">📞</div> 
-                            <span class="font-medium">+31 6 16978993</span>
-                        </a>
-                        <a href="mailto:royalhomeclean@outlook.com" class="flex items-center gap-4 hover:text-blue-300 transition-colors break-all group">
-                            <div class="w-10 h-10 bg-blue-800 rounded-full flex items-center justify-center text-xl shadow-inner group-hover:bg-blue-700 transition-colors" aria-hidden="true">✉️</div> 
-                            <span class="font-medium">royalhomeclean@outlook.com</span>
-                        </a>
-                        <a href="https://www.facebook.com/RoyalHomeCleanDelft/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-4 hover:text-blue-300 transition-colors break-all group" aria-label="Visit Royal Home Clean Delft on Facebook">
-                            <div class="w-10 h-10 bg-blue-800 rounded-full flex items-center justify-center text-xl shadow-inner group-hover:bg-blue-700 transition-colors" aria-hidden="true">
-                                <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.469h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.469h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-                            </div> 
-                            <span class="font-medium">Royal Home Clean Delft</span>
-                        </a>
-                    </div>
-                </div>
-                
-                <div class="md:w-3/5 p-10 lg:p-14">
-                    <form id="contact-form" class="space-y-5">
-                        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
-
-                        <div>
-                            <select name="service" required class="lang en active w-full p-4 bg-slate-50 border border-slate-200 rounded-2xl focus:ring-2 focus:ring-blue-500 focus:bg-white outline-none transition-all text-slate-700 appearance-none cursor-pointer">
-                                <option value="Move Out Cleaning" selected>Move Out Cleaning</option>
-                                <option value="Deep Clean">Deep Clean</option>
-                                <option value="Maintenance Cleaning">Regular Cleaning</option>
-                                <option value="Carpet Cleaning">Carpet Cleaning</option>
-                            </select>
-                            <select name="service" required disabled class="lang nl w-full p-4 bg-slate-50 border border-slate-200 rounded-2xl focus:ring-2 focus:ring-blue-500 focus:bg-white outline-none transition-all text-slate-700 appearance-none cursor-pointer">
-                                <option value="Move Out Cleaning" selected>Opleveringsschoonmaak</option>
-                                <option value="Deep Clean">Dieptereiniging</option>
-                                <option value="Maintenance Cleaning">Reguliere Schoonmaak</option>
-                                <option value="Carpet Cleaning">Tapijtreiniging</option>
-                            </select>
-                        </div>
-                        <div>
-                            <input name="name" required placeholder="Name" aria-label="Your Name" class="lang en active w-full p-4 bg-slate-50 border border-slate-200 rounded-2xl focus:ring-2 focus:ring-blue-500 focus:bg-white outline-none transition-all text-slate-700 placeholder-slate-400">
-                            <input name="name" required disabled placeholder="Naam" aria-label="Uw Naam" class="lang nl w-full p-4 bg-slate-50 border border-slate-200 rounded-2xl focus:ring-2 focus:ring-blue-500 focus:bg-white outline-none transition-all text-slate-700 placeholder-slate-400">
-                        </div>
-                        <div>
-                            <input name="email" required type="email" placeholder="Email Address" aria-label="Your Email" class="lang en active w-full p-4 bg-slate-50 border border-slate-200 rounded-2xl focus:ring-2 focus:ring-blue-500 focus:bg-white outline-none transition-all text-slate-700 placeholder-slate-400">
-                            <input name="email" required type="email" disabled placeholder="E-mailadres" aria-label="Uw E-mailadres" class="lang nl w-full p-4 bg-slate-50 border border-slate-200 rounded-2xl focus:ring-2 focus:ring-blue-500 focus:bg-white outline-none transition-all text-slate-700 placeholder-slate-400">
-                        </div>
-                        <div>
-                            <textarea name="message" placeholder="Size of your room/house? Any specific heavy cleaning areas?" aria-label="Your Message" class="lang en active w-full p-4 bg-slate-50 border border-slate-200 rounded-2xl h-32 focus:ring-2 focus:ring-blue-500 focus:bg-white outline-none transition-all resize-none text-slate-700 placeholder-slate-400"></textarea>
-                            <textarea name="message" disabled placeholder="Grootte van uw kamer/woning? Specifieke aandachtsgebieden?" aria-label="Uw Bericht" class="lang nl w-full p-4 bg-slate-50 border border-slate-200 rounded-2xl h-32 focus:ring-2 focus:ring-blue-500 focus:bg-white outline-none transition-all resize-none text-slate-700 placeholder-slate-400"></textarea>
-                        </div>
-                        <div>
-                            <button type="submit" class="w-full bg-blue-900 text-white font-bold text-xl tracking-wide py-4 rounded-2xl shadow-lg hover:bg-blue-800 hover:-translate-y-1 transition-all active:scale-[0.98]">
-                                <span class="lang en active">SEND</span>
-                                <span class="lang nl">VERZENDEN</span>
-                            </button>
-                            <p class="text-center text-sm text-slate-500 mt-3 font-medium">
-                                <span class="lang en active">⚡ We usually respond within a few hours</span>
-                                <span class="lang nl">⚡ Wij reageren meestal binnen een paar uur</span>
-                            </p>
-                        </div>
-                        <p id="successMessage" class="hidden text-emerald-600 font-bold text-center mt-6 bg-emerald-50 p-4 rounded-xl border border-emerald-100" role="alert">
-                    		<span class="lang en active">✨ Message sent! We'll contact you shortly.</span>
-                    		<span class="lang nl">✨ Bericht verzonden! We nemen snel contact op.</span>
-                        </p>
-                    </form>
-                </div>
-            </div>
+    <section id="contact" class="py-20 px-6 bg-white">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-4xl md:text-[2.75rem] font-bold text-[#1a3673] mb-3" style="font-family: 'Playfair Display', serif;">Get in touch</h2>
+            <p class="text-slate-500 text-lg mb-8 font-medium">
+                Feel free to get in touch to book a visit or for more information. We will respond as soon as possible!
+            </p>
             
-            <div class="mt-8 text-center text-xs text-slate-500 font-medium">
+            <form id="contact-form" class="space-y-5">
+                <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+
+                <div>
+                    <input name="name" required placeholder="Name / Naam" aria-label="Name" class="w-full p-4 bg-white border border-slate-200 rounded-2xl focus:ring-2 focus:ring-[#1a3673] focus:border-transparent outline-none transition-all text-slate-700 placeholder-slate-400">
+                </div>
+                <div>
+                    <input name="email" required type="email" placeholder="Email Address / E-mailadres" aria-label="Email Address" class="w-full p-4 bg-white border border-slate-200 rounded-2xl focus:ring-2 focus:ring-[#1a3673] focus:border-transparent outline-none transition-all text-slate-700 placeholder-slate-400">
+                </div>
+                <div>
+                    <input type="tel" name="phone" required placeholder="Phone Number / Telefoonnummer" aria-label="Phone Number" class="w-full p-4 bg-white border border-slate-200 rounded-2xl focus:ring-2 focus:ring-[#1a3673] focus:border-transparent outline-none transition-all text-slate-700 placeholder-slate-400">
+                </div>
+                <div>
+                    <textarea name="message" required placeholder="Tell us more information / Vertel ons meer informatie" aria-label="Message" class="w-full p-4 bg-white border border-slate-200 rounded-2xl h-40 focus:ring-2 focus:ring-[#1a3673] focus:border-transparent outline-none transition-all resize-none text-slate-700 placeholder-slate-400"></textarea>
+                </div>
+                <div>
+                    <button type="submit" class="w-full bg-[#203b82] text-white font-bold text-xl py-4 rounded-2xl hover:bg-[#152a61] transition-all active:scale-[0.99] shadow-sm">
+                        Send
+                    </button>
+                    <p class="text-center text-sm text-slate-400 mt-4 font-medium flex justify-center items-center gap-1.5">
+                        <span class="text-yellow-400 text-base">⚡</span> We usually respond within a few hours
+                    </p>
+                </div>
+                <p id="successMessage" class="hidden text-emerald-600 font-bold text-center mt-6 bg-emerald-50 p-4 rounded-xl border border-emerald-100" role="alert">
+                    ✨ Message sent! We'll contact you shortly. / Bericht verzonden! We nemen snel contact op.
+                </p>
+            </form>
+
+            <div class="mt-12 text-center text-xs text-slate-400 font-medium border-t border-slate-100 pt-6">
                 <p class="lang en active">*Please note: The €120 base rate is for up to 4 hours of cleaning. Each additional hour is charged at €25 per hour.</p>
                 <p class="lang nl">*Let op: Het starttarief van €120 is voor maximaal 4 uur schoonmaken. Voor elk extra uur wordt €25 in rekening gebracht.</p>
             </div>
@@ -469,7 +419,8 @@ mobileLinks.forEach(link => {
 function setLang(lang){
     document.querySelectorAll('.lang').forEach(el => {
         el.classList.remove('active');
-        // Disable form inputs belonging to the alternate language to prevent validation conflicts
+        // Because the new contact form uses unified fields without language classes, 
+        // this loop only affects elements specifically marked with .lang (like nav and footers)
         if (el.tagName === 'INPUT' || el.tagName === 'SELECT' || el.tagName === 'TEXTAREA') {
             el.disabled = true;
         }
@@ -477,7 +428,6 @@ function setLang(lang){
     
     document.querySelectorAll('.'+lang).forEach(el => {
         el.classList.add('active');
-        // Enable form inputs matching the currently active language context
         if (el.tagName === 'INPUT' || el.tagName === 'SELECT' || el.tagName === 'TEXTAREA') {
             el.disabled = false;
         }
