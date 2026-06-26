@@ -535,7 +535,7 @@
                         Hallo, en bedankt voor uw interesse in Royal Home Clean Delft. Als een toegewijd, klein team van professionele <strong>schoonmakers in Delft</strong>, geloven wij dat schoonmaken meer is dan een taak—het gaat om het creëren van een rustige omgeving waarin u kunt floreren.
                     </p>
                     <p class="text-lg text-slate-600 leading-relaxed mb-8">
-                        Als professioneel <strong>schoonmaakbedrijf</strong> onderscheiden wij ons van grotere partijen door onze persoonlijke aanpak en oog voor detail. Met onze huishoudelijke hulp kunt u rekenen op een betrouwbare schoonmaker die uw woning met zorg laat stralen.
+                        Als professioneel <strong>schoonmaakbedrijf</strong> onderscheiden wij ons van grotere partijen door onze persoonlijke aanpak og oog voor detail. Met onze huishoudelijke hulp kunt u rekenen op een betrouwbare schoonmaker die uw woning met zorg laat stralen.
                     </p>
                     <div class="flex items-center gap-4 text-blue-900 font-bold bg-blue-50 p-4 rounded-xl border border-blue-100">
                         <div class="w-1.5 h-12 bg-blue-500 rounded-full"></div>
@@ -671,32 +671,24 @@
                         <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
 
                         <div>
-                            <select name="service" required 
-                                class="w-full p-4 bg-slate-50 border border-slate-200 rounded-2xl focus:ring-2 focus:ring-blue-500 focus:bg-white outline-none transition-all text-slate-700 appearance-none cursor-pointer">
-                                <option value="" disabled selected class="lang en active">What service do you need?</option>
-                                <option value="" disabled selected class="lang nl">Welke dienst heeft u nodig?</option>
-                                
-                                <option value="Maintenance Cleaning">Regular Cleaning / Reguliere Schoonmaak</option>
-                                <option value="Deep Clean">Deep Clean / Dieptereiniging</option>
-                                <option value="Move Out Cleaning">Move Out Cleaning / Opleveringsschoonmaak</option>
-                                <option value="Carpet Cleaning">Carpet Cleaning / Tapijtreiniging</option>
-                            </select>
-                        </div>
-
-                        <div>
                             <input name="name" required placeholder="Name / Naam" aria-label="Your Name" 
                                 class="w-full p-4 bg-slate-50 border border-slate-200 rounded-2xl focus:ring-2 focus:ring-blue-500 focus:bg-white outline-none transition-all text-slate-700 placeholder-slate-400">
                         </div>
 
                         <div>
-                            <input name="email" required type="email" placeholder="Email Address" aria-label="Your Email" 
+                            <input name="email" required type="email" placeholder="Email Address / E-mailadres" aria-label="Your Email" 
                                 class="w-full p-4 bg-slate-50 border border-slate-200 rounded-2xl focus:ring-2 focus:ring-blue-500 focus:bg-white outline-none transition-all text-slate-700 placeholder-slate-400">
                         </div>
 
                         <div>
-                            <textarea name="message" placeholder="Optional: Tell us about your home (size, rooms, etc.)" aria-label="Your Message" 
+                            <input name="phone" required type="tel" placeholder="Phone Number / Telefoonnummer" aria-label="Your Phone Number" 
+                                class="w-full p-4 bg-slate-50 border border-slate-200 rounded-2xl focus:ring-2 focus:ring-blue-500 focus:bg-white outline-none transition-all text-slate-700 placeholder-slate-400">
+                        </div>
+
+                        <div>
+                            <textarea name="message" placeholder="Tell us more information / Vertel ons meer informatie" aria-label="Your Message" 
                                 class="lang en active w-full p-4 bg-slate-50 border border-slate-200 rounded-2xl h-32 focus:ring-2 focus:ring-blue-500 focus:bg-white outline-none transition-all resize-none text-slate-700 placeholder-slate-400"></textarea>
-                            <textarea name="message" placeholder="Optioneel: Vertel ons over uw woning (grootte, kamers, etc.)" aria-label="Uw Bericht" 
+                            <textarea name="message" placeholder="Vertel ons meer informatie / Tell us more information" aria-label="Uw Bericht" 
                                 class="lang nl w-full p-4 bg-slate-50 border border-slate-200 rounded-2xl h-32 focus:ring-2 focus:ring-blue-500 focus:bg-white outline-none transition-all resize-none text-slate-700 placeholder-slate-400"></textarea>
                         </div>
 
@@ -710,9 +702,16 @@
                             <span class="lang nl">⚡ We reageren meestal binnen enkele uren</span>
                         </p>
 
+                        <!-- UPDATED SUCCESS MESSAGE CONTAINER -->
                         <p id="successMessage" class="hidden text-emerald-600 font-bold text-center mt-6 bg-emerald-50 p-4 rounded-xl border border-emerald-100" role="alert">
-                            <span class="lang en active">✨ Message sent! We'll contact you shortly.</span>
-                            <span class="lang nl">✨ Bericht verzonden! We nemen snel contact op.</span>
+                            <span class="lang en active">
+                                ✨ Message sent! We'll contact you shortly.<br>
+                                <span class="text-xs font-normal text-emerald-700 block mt-1.5">⚠️ Note: If you don't see our reply in your inbox within a few hours, please remember to check your <strong>junk/spam folder</strong>!</span>
+                            </span>
+                            <span class="lang nl">
+                                ✨ Bericht verzonden! We nemen snel contact op.<br>
+                                <span class="text-xs font-normal text-emerald-700 block mt-1.5">⚠️ Let op: Als u ons antwoord niet binnen een paar uur ontvangt, controleer dan uw <strong>ongewenste e-mail/spambox</strong>!</span>
+                            </span>
                         </p>
                     </form>
                 </div>
@@ -763,7 +762,6 @@ mobileBtn.addEventListener('click', () => {
     mobileDropdown.classList.toggle('flex');
 });
 
-// Close menu when a link is clicked
 mobileLinks.forEach(link => {
     link.addEventListener('click', () => {
         mobileDropdown.classList.add('hidden');
@@ -816,14 +814,12 @@ document.getElementById("contact-form").addEventListener("submit", function(e){
     e.preventDefault();
     const form = this;
     
-    // Honeypot check - if a bot fills out the hidden field, stop the form from sending
     if(form.elements["_honey"].value !== "") {
         console.warn("Spam bot detected!");
         return false;
     }
 
     const btn = form.querySelector('button[type="submit"]');
-    
     const originalText = btn.innerHTML;
     btn.innerHTML = '...';
     btn.disabled = true;
@@ -836,9 +832,10 @@ document.getElementById("contact-form").addEventListener("submit", function(e){
         btn.innerHTML = originalText;
         btn.disabled = false;
         
+        // EXTENDED TIMEOUT TO 10 SECONDS SO THE ALERT CAN BE READ
         setTimeout(() => {
             document.getElementById("successMessage").classList.add("hidden");
-        }, 5000);
+        }, 10000);
     })
     .catch(() => {
         alert("Something went wrong. Please try WhatsApp.");
