@@ -400,34 +400,50 @@
                         <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
                         
                         <div>
-                            <select name="service" required class="w-full p-4 bg-slate-50 border border-slate-200 rounded-2xl focus:ring-2 focus:ring-blue-500 focus:bg-white outline-none transition-all text-slate-700 appearance-none cursor-pointer">
-                                <option value="Carpet Cleaning" selected>Carpet Cleaning / Tapijtreiniging</option>
-                                <option value="Move Out Cleaning">Move Out Cleaning / Opleveringsschoonmaak</option>
-                                <option value="Deep Clean">Deep Clean / Dieptereiniging</option>
-                                <option value="Maintenance Cleaning">Regular Cleaning / Reguliere Schoonmaak</option>
+                            <!-- English Select -->
+                            <select name="service" required disabled class="lang en w-full p-4 bg-slate-50 border border-slate-200 rounded-2xl focus:ring-2 focus:ring-blue-500 focus:bg-white outline-none transition-all text-slate-700 appearance-none cursor-pointer">
+                                <option value="Carpet Cleaning" selected>Carpet Cleaning</option>
+                                <option value="Move Out Cleaning">Move Out Cleaning</option>
+                                <option value="Deep Clean">Deep Clean</option>
+                                <option value="Maintenance Cleaning">Regular Cleaning</option>
+                            </select>
+                            <!-- Dutch Select -->
+                            <select name="service" required class="lang nl active w-full p-4 bg-slate-50 border border-slate-200 rounded-2xl focus:ring-2 focus:ring-blue-500 focus:bg-white outline-none transition-all text-slate-700 appearance-none cursor-pointer">
+                                <option value="Carpet Cleaning" selected>Tapijtreiniging</option>
+                                <option value="Move Out Cleaning">Opleveringsschoonmaak</option>
+                                <option value="Deep Clean">Dieptereiniging</option>
+                                <option value="Maintenance Cleaning">Reguliere Schoonmaak</option>
                             </select>
                         </div>
                         <div>
-                            <input name="name" required placeholder="Name / Naam" aria-label="Your Name" class="w-full p-4 bg-slate-50 border border-slate-200 rounded-2xl focus:ring-2 focus:ring-blue-500 focus:bg-white outline-none transition-all text-slate-700">
+                            <!-- English Name Input -->
+                            <input name="name" required disabled placeholder="Name" aria-label="Your Name" class="lang en w-full p-4 bg-slate-50 border border-slate-200 rounded-2xl focus:ring-2 focus:ring-blue-500 focus:bg-white outline-none transition-all text-slate-700 placeholder-slate-400">
+                            <!-- Dutch Name Input -->
+                            <input name="name" required placeholder="Naam" aria-label="Uw Naam" class="lang nl active w-full p-4 bg-slate-50 border border-slate-200 rounded-2xl focus:ring-2 focus:ring-blue-500 focus:bg-white outline-none transition-all text-slate-700 placeholder-slate-400">
                         </div>
                         <div>
-                            <input name="email" required type="email" placeholder="Email Address" aria-label="Your Email" class="w-full p-4 bg-slate-50 border border-slate-200 rounded-2xl focus:ring-2 focus:ring-blue-500 focus:bg-white outline-none transition-all text-slate-700">
+                            <!-- English Email Input -->
+                            <input name="email" required disabled type="email" placeholder="Email Address" aria-label="Your Email" class="lang en w-full p-4 bg-slate-50 border border-slate-200 rounded-2xl focus:ring-2 focus:ring-blue-500 focus:bg-white outline-none transition-all text-slate-700 placeholder-slate-400">
+                            <!-- Dutch Email Input -->
+                            <input name="email" required type="email" placeholder="E-mailadres" aria-label="Uw E-mailadres" class="lang nl active w-full p-4 bg-slate-50 border border-slate-200 rounded-2xl focus:ring-2 focus:ring-blue-500 focus:bg-white outline-none transition-all text-slate-700 placeholder-slate-400">
                         </div>
                         <div>
-                            <textarea name="message" placeholder="Approximate m²? Any specific stains (wine, pets, coffee)?" aria-label="Your Message" class="lang en active w-full p-4 bg-slate-50 border border-slate-200 rounded-2xl h-32 focus:ring-2 focus:ring-blue-500 focus:bg-white outline-none transition-all resize-none text-slate-700"></textarea>
-                            <textarea name="message" placeholder="Ongeveer m²? Specifieke vlekken (wijn, huisdieren, koffie)?" aria-label="Uw Bericht" class="lang nl w-full p-4 bg-slate-50 border border-slate-200 rounded-2xl h-32 focus:ring-2 focus:ring-blue-500 focus:bg-white outline-none transition-all resize-none text-slate-700"></textarea>
+                            <!-- English Message Textarea -->
+                            <textarea name="message" required disabled placeholder="Approximate m²? Any specific stains (wine, pets, coffee)?" aria-label="Your Message" class="lang en w-full p-4 bg-slate-50 border border-slate-200 rounded-2xl h-32 focus:ring-2 focus:ring-blue-500 focus:bg-white outline-none transition-all resize-none text-slate-700 placeholder-slate-400"></textarea>
+                            <!-- Dutch Message Textarea -->
+                            <textarea name="message" required placeholder="Ongeveer m²? Specifieke vlekken (wijn, huisdieren, koffie)?" aria-label="Uw Bericht" class="lang nl active w-full p-4 bg-slate-50 border border-slate-200 rounded-2xl h-32 focus:ring-2 focus:ring-blue-500 focus:bg-white outline-none transition-all resize-none text-slate-700 placeholder-slate-400"></textarea>
                         </div>
                         <button type="submit" class="w-full bg-blue-900 text-white font-bold text-xl tracking-wide py-4 rounded-2xl shadow-lg hover:bg-blue-800 hover:-translate-y-1 transition-all active:scale-[0.98]">
                             <span class="lang nl active">VERZENDEN</span>
                             <span class="lang en">SEND</span>
                         </button>
                         <p class="text-center text-sm text-slate-500 mt-3 font-medium">
-                            <span class="lang en active">⚡ We usually respond within a few hours</span>
-                            <span class="lang nl">⚡ Wij reageren meestal binnen een paar uur</span>
+                            <span class="lang en">⚡ We usually respond within a few hours</span>
+                            <span class="lang nl active">⚡ Wij reageren meestal binnen een paar uur</span>
                         </p>
                         <p id="successMessage" class="hidden text-emerald-600 font-bold text-center mt-6 bg-emerald-50 p-4 rounded-xl border border-emerald-100" role="alert">
-                            <span class="lang en active">✨ Message sent! We'll contact you shortly.</span>
-                            <span class="lang nl">✨ Bericht verzonden! We nemen snel contact op.</span>
+                            <span class="lang en">✨ Message sent! We'll contact you shortly.</span>
+                            <span class="lang nl active">✨ Bericht verzonden! We nemen snel contact op.</span>
                         </p>
                     </form>
                 </div>
@@ -492,8 +508,21 @@
 
     // Language Toggle Logic
     function setLang(lang){
-        document.querySelectorAll('.lang').forEach(el => el.classList.remove('active'));
-        document.querySelectorAll('.'+lang).forEach(el => el.classList.add('active'));
+        document.querySelectorAll('.lang').forEach(el => {
+            el.classList.remove('active');
+            // Disable form inputs belonging to the alternate language to prevent validation conflicts
+            if (el.tagName === 'INPUT' || el.tagName === 'SELECT' || el.tagName === 'TEXTAREA') {
+                el.disabled = true;
+            }
+        });
+        
+        document.querySelectorAll('.'+lang).forEach(el => {
+            el.classList.add('active');
+            // Enable form inputs matching the currently active language context
+            if (el.tagName === 'INPUT' || el.tagName === 'SELECT' || el.tagName === 'TEXTAREA') {
+                el.disabled = false;
+            }
+        });
         
         const btnEn = document.getElementById('btn-en');
         const btnNl = document.getElementById('btn-nl');
