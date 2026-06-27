@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="icon" type="image/png" href="/favicon.png">
-    
-    <link rel="canonical" href="https://www.royalhomecleandelft.nl/" />
-    <link rel="alternate" hreflang="nl" href="https://www.royalhomecleandelft.nl/?lang=nl" />
-    <link rel="alternate" hreflang="en" href="https://www.royalhomecleandelft.nl/?lang=en" />
-    <link rel="alternate" hreflang="x-default" href="https://www.royalhomecleandelft.nl/" />
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <title>Schoonmaakbedrijf Delft | House Cleaning Service | Royal Home Clean</title>
     <meta name="description" content="Top-rated cleaning in Delft. Reguliere & opleveringsschoonmaak vanaf €25/u. Professionele resultaten, snel & betrouwbaar. Ontdek hoe wij uw woning...">
     <meta name="keywords" content="house cleaning service, schoonmaak bedrijf, schoonmaakbedrijf delft, schoonmaakbedrijf, schoonmaakbedrijf voor particulieren, cleaning service delft, huis schoonmaken delft">
+    
+    <link rel="icon" type="image/png" href="/favicon.png">
+    
+    <link rel="canonical" href="https://www.royalhomecleandelft.nl/" />
+    <link rel="alternate" hreflang="nl" href="https://www.royalhomecleandelft.nl/?lang=nl" />
+    <link rel="alternate" hreflang="en" href="https://www.royalhomecleandelft.nl/?lang=en" />
+    <link rel="alternate" hreflang="x-default" href="https://www.royalhomecleandelft.nl/" />
     
     <meta property="og:title" content="Schoonmaakbedrijf Delft | House Cleaning Service">
     <meta property="og:description" content="Premium house cleaning service perfectly tailored for families and professionals in Delft. Vakkundig schoonmaakbedrijf voor particulieren.">
@@ -417,11 +417,11 @@
 
                 <div class="md:w-1/2 relative" data-aos="fade-right">
                     <img 
-                        src="tapijt reinigen delft 2-shot.png"
+                        src="tapijt%20reinigen%20delft%202-shot.png"
                         alt="Professional carpet cleaning service in Delft"
                         loading="lazy"
                         class="rounded-[2rem] object-cover h-64 w-full shadow-inner"
-                        onerror="this.src='tapijt reinigen delft 2-shot.png'"
+                        onerror="this.src='tapijt%20reinigen%20delft%202-shot.png'"
                     >
                     <div class="absolute -top-4 -left-4 bg-blue-900 text-white px-6 py-2 rounded-full font-bold shadow-xl -rotate-3">
                         SPECIALTY SERVICE
@@ -689,7 +689,7 @@
                             <textarea name="message" placeholder="Tell us more information / Vertel ons meer informatie" aria-label="Your Message" 
                                 class="lang en active w-full p-4 bg-slate-50 border border-slate-200 rounded-2xl h-32 focus:ring-2 focus:ring-blue-500 focus:bg-white outline-none transition-all resize-none text-slate-700 placeholder-slate-400"></textarea>
                             <textarea name="message" placeholder="Vertel ons meer informatie / Tell us more information" aria-label="Uw Bericht" 
-                                class="lang nl w-full p-4 bg-slate-50 border border-slate-200 rounded-2xl h-32 focus:ring-2 focus:ring-blue-500 focus:bg-white outline-none transition-all resize-none text-slate-700 placeholder-slate-400"></textarea>
+                                class="lang nl w-full p-4 bg-slate-50 border border-slate-200 rounded-2xl h-32 focus:ring-2 focus:ring-blue-500 focus:bg-white outline-none transition-all resize-none text-slate-700 placeholder-slate-400" disabled></textarea>
                         </div>
 
                         <button type="submit" class="w-full bg-blue-900 text-white font-bold text-lg py-4 rounded-2xl shadow-lg hover:bg-blue-800 hover:-translate-y-1 transition-all active:scale-[0.98]">
@@ -702,7 +702,6 @@
                             <span class="lang nl">⚡ We reageren meestal binnen enkele uren</span>
                         </p>
 
-                        <!-- UPDATED SUCCESS MESSAGE CONTAINER -->
                         <p id="successMessage" class="hidden text-emerald-600 font-bold text-center mt-6 bg-emerald-50 p-4 rounded-xl border border-emerald-100" role="alert">
                             <span class="lang en active">
                                 ✨ Message sent! We'll contact you shortly.<br>
@@ -770,8 +769,20 @@ mobileLinks.forEach(link => {
 });
 
 function setLang(lang){
-    document.querySelectorAll('.lang').forEach(el => el.classList.remove('active'));
-    document.querySelectorAll('.'+lang).forEach(el => el.classList.add('active'));
+    // Update logic to correctly disable hidden textareas to prevent form submission errors
+    document.querySelectorAll('.lang').forEach(el => {
+        el.classList.remove('active');
+        if (el.tagName === 'INPUT' || el.tagName === 'SELECT' || el.tagName === 'TEXTAREA') {
+            el.disabled = true;
+        }
+    });
+    
+    document.querySelectorAll('.'+lang).forEach(el => {
+        el.classList.add('active');
+        if (el.tagName === 'INPUT' || el.tagName === 'SELECT' || el.tagName === 'TEXTAREA') {
+            el.disabled = false;
+        }
+    });
     
     const btnEn = document.getElementById('btn-en');
     const btnNl = document.getElementById('btn-nl');
